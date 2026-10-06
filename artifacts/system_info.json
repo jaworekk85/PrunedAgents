@@ -1,0 +1,40 @@
+{
+  "cpu_count": 12,
+  "cuda": {
+    "available": true,
+    "devices": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+        "total_vram_bytes": 4294508544
+      }
+    ]
+  },
+  "machine": "AMD64",
+  "nvidia_smi": [
+    {
+      "driver": "555.99",
+      "memory_total": "4096 MiB",
+      "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU"
+    }
+  ],
+  "packages": {
+    "accelerate": "1.15.0",
+    "datasets": "5.0.1",
+    "matplotlib": "3.10.9",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "psutil": "7.2.2",
+    "pytest": "9.1.1",
+    "pyyaml": "6.0.3",
+    "ruff": "0.16.9",
+    "scipy": "1.15.3",
+    "torch": "2.6.0+cu124",
+    "transformers": "5.17.0"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "ram_bytes": 14877265920,
+  "timestamp_utc": "2026-09-24T23:35:05.561851+00:00"
+}

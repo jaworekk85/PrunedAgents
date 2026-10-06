@@ -1,0 +1,11 @@
+{
+  "id": "local/toy-role-model",
+  "revision": null,
+  "dtype": "float32",
+  "device": "cpu",
+  "backend": "toy",
+  "max_new_tokens": 64,
+  "toy_layers": 4,
+  "toy_intermediate_size": 10
+}
+

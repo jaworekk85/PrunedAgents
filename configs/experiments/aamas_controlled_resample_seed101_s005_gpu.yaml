@@ -1,0 +1,83 @@
+{
+  "seed": 42,
+  "run_name": "aamas_controlled_resample_seed101_s005_gpu",
+  "model": {
+    "id": "Qwen/Qwen3-0.6B",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 32
+  },
+  "benchmark": {
+    "name": "controlled_arithmetic",
+    "split_strategy": "template_disjoint",
+    "calibration_size": 24,
+    "dev_size": 8,
+    "test_size": 48
+  },
+  "roles": {
+    "names": ["planner", "solver", "critic", "verifier"],
+    "prompt_file": "configs/roles/controlled_checker_roles.json"
+  },
+  "candidate_policy": {
+    "default_mode": "gold",
+    "wrong_offset": 1,
+    "mode_by_role": {
+      "planner": "unused",
+      "solver": "no_answer_plan",
+      "critic": "wrong_answer_only",
+      "verifier": "wrong_answer_only"
+    }
+  },
+  "activation_collection": {
+    "split": "calibration",
+    "max_pairs": 96,
+    "resample_indices": [18, 6, 17, 11, 14, 1, 21, 16, 6, 19, 7, 9, 15, 22, 6, 10, 14, 2, 8, 6, 5, 2, 14, 17],
+    "output_path": "artifacts/activation_stats/aamas_controlled_resample_seed101_stats.json",
+    "response_cache_path": "artifacts/cached_responses/aamas_controlled_resample_seed101.jsonl"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1.0e-8
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [0.05],
+    "per_layer_ratio": true,
+    "random_seeds": [1, 2, 3]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/aamas_controlled_resample_seed101_stats.json",
+    "output_template": "artifacts/masks/aamas_controlled_resample_seed101_s005_{sparsity}.json",
+    "source": "aamas_controlled_resample_seed101_s005_gpu"
+  },
+  "functional_eval": {
+    "split": "test",
+    "max_items": 48,
+    "max_new_tokens": 32,
+    "bootstrap_samples": 10000,
+    "eval_roles": ["solver", "critic", "verifier"],
+    "primary_roles": ["solver", "critic", "verifier"],
+    "masks_path": "artifacts/masks/aamas_controlled_resample_seed101_s005_0.05.json",
+    "mask_names": [
+      "unmasked",
+      "planner",
+      "solver",
+      "critic",
+      "verifier",
+      "generic",
+      "magnitude",
+      "random_seed_1",
+      "random_seed_2",
+      "random_seed_3"
+    ],
+    "output_path": "results/aamas_controlled_resample_seed101_s005_metrics.json",
+    "predictions_path": "results/aamas_controlled_resample_seed101_s005_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

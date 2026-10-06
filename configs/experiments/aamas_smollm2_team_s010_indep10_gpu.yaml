@@ -1,0 +1,113 @@
+{
+  "seed": 42,
+  "run_name": "aamas_smollm2_team_s010_indep10_gpu",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": null,
+    "dtype": "float16",
+    "quantization": "int8",
+    "use_chat_template": true,
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 32
+  },
+  "benchmark": {
+    "name": "controlled_arithmetic",
+    "split_strategy": "template_disjoint",
+    "calibration_size": 24,
+    "dev_size": 8,
+    "test_size": 48
+  },
+  "roles": {
+    "names": [
+      "planner",
+      "solver",
+      "critic",
+      "verifier"
+    ],
+    "prompt_file": "configs/roles/controlled_checker_roles.json"
+  },
+  "candidate_policy": {
+    "default_mode": "gold",
+    "wrong_offset": 1,
+    "mode_by_role": {
+      "planner": "unused",
+      "solver": "no_answer_plan",
+      "critic": "wrong_answer_only",
+      "verifier": "wrong_answer_only"
+    }
+  },
+  "activation_collection": {
+    "split": "calibration",
+    "max_pairs": 96,
+    "output_path": "artifacts/activation_stats/aamas_smollm2_team_stats.json",
+    "response_cache_path": "artifacts/cached_responses/aamas_smollm2_team.jsonl"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1e-08
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [
+      0.1
+    ],
+    "per_layer_ratio": true,
+    "random_seeds": [
+      1,
+      2,
+      3
+    ]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/aamas_smollm2_team_stats.json",
+    "output_template": "artifacts/masks/aamas_smollm2_team_s010_{sparsity}.json",
+    "source": "aamas_smollm2_team_s010_gpu"
+  },
+  "team_eval": {
+    "split": "test",
+    "max_items": 48,
+    "max_new_tokens": 32,
+    "checker_role": "verifier",
+    "bootstrap_samples": 10000,
+    "reference_condition": "indep_random_4",
+    "masks_path": "artifacts/masks/aamas_smollm2_team_s010_0.1_seeds10.json",
+    "conditions": {
+      "indep_random_4": {
+        "solver_mask": "random_seed_23",
+        "checker_mask": "random_seed_24"
+      },
+      "indep_random_5": {
+        "solver_mask": "random_seed_25",
+        "checker_mask": "random_seed_26"
+      },
+      "indep_random_6": {
+        "solver_mask": "random_seed_27",
+        "checker_mask": "random_seed_28"
+      },
+      "indep_random_7": {
+        "solver_mask": "random_seed_29",
+        "checker_mask": "random_seed_30"
+      },
+      "indep_random_8": {
+        "solver_mask": "random_seed_31",
+        "checker_mask": "random_seed_32"
+      },
+      "indep_random_9": {
+        "solver_mask": "random_seed_33",
+        "checker_mask": "random_seed_34"
+      },
+      "indep_random_10": {
+        "solver_mask": "random_seed_35",
+        "checker_mask": "random_seed_36"
+      }
+    },
+    "output_path": "results/aamas_smollm2_team_s010_indep10_metrics.json",
+    "predictions_path": "results/aamas_smollm2_team_s010_indep10_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

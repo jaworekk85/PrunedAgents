@@ -1,0 +1,18 @@
+{
+  "planner": {
+    "system": "You are the planner. Identify which facts are relevant to the question.",
+    "template": "Task:\n{question}\n\nName the entity and location facts relevant to this question in one short line. Do not give the final location."
+  },
+  "solver": {
+    "system": "You are the solver. Read the passage and answer the question.",
+    "template": "Task:\n{question}\n\nAnswer the question using the passage. End with exactly one line: FINAL: <location>"
+  },
+  "critic": {
+    "system": "You are the critic. Check the candidate location against the passage.",
+    "template": "Task:\n{question}\n\nCandidate:\n{candidate}\n\nThe candidate may be correct or incorrect. Check it against the passage. Reply with exactly two lines:\nDECISION: <CORRECT or INCORRECT>\nFINAL: <correct location>"
+  },
+  "verifier": {
+    "system": "You are the verifier. Independently verify the candidate location.",
+    "template": "Task:\n{question}\n\nCandidate:\n{candidate}\n\nThe candidate may be correct or incorrect. Do not copy it blindly. Verify it against the passage yourself. Reply with exactly two lines:\nDECISION: <CORRECT or INCORRECT>\nFINAL: <correct location>"
+  }
+}

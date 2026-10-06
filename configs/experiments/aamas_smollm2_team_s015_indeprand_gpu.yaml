@@ -1,0 +1,97 @@
+{
+  "seed": 42,
+  "run_name": "aamas_smollm2_team_s015_indeprand_gpu",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": null,
+    "dtype": "float16",
+    "quantization": "int8",
+    "use_chat_template": true,
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 32
+  },
+  "benchmark": {
+    "name": "controlled_arithmetic",
+    "split_strategy": "template_disjoint",
+    "calibration_size": 24,
+    "dev_size": 8,
+    "test_size": 48
+  },
+  "roles": {
+    "names": [
+      "planner",
+      "solver",
+      "critic",
+      "verifier"
+    ],
+    "prompt_file": "configs/roles/controlled_checker_roles.json"
+  },
+  "candidate_policy": {
+    "default_mode": "gold",
+    "wrong_offset": 1,
+    "mode_by_role": {
+      "planner": "unused",
+      "solver": "no_answer_plan",
+      "critic": "wrong_answer_only",
+      "verifier": "wrong_answer_only"
+    }
+  },
+  "activation_collection": {
+    "split": "calibration",
+    "max_pairs": 96,
+    "output_path": "artifacts/activation_stats/aamas_smollm2_team_stats.json",
+    "response_cache_path": "artifacts/cached_responses/aamas_smollm2_team.jsonl"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1e-08
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [
+      0.15
+    ],
+    "per_layer_ratio": true,
+    "random_seeds": [
+      1,
+      2,
+      3
+    ]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/aamas_smollm2_team_stats.json",
+    "output_template": "artifacts/masks/aamas_smollm2_team_s015_{sparsity}.json",
+    "source": "aamas_smollm2_team_s015_gpu"
+  },
+  "team_eval": {
+    "split": "test",
+    "max_items": 48,
+    "max_new_tokens": 32,
+    "checker_role": "verifier",
+    "bootstrap_samples": 10000,
+    "reference_condition": "indep_random_1",
+    "masks_path": "artifacts/masks/aamas_smollm2_team_s015_0.15_indeprand.json",
+    "conditions": {
+      "indep_random_1": {
+        "solver_mask": "random_seed_4",
+        "checker_mask": "random_seed_5"
+      },
+      "indep_random_2": {
+        "solver_mask": "random_seed_6",
+        "checker_mask": "random_seed_7"
+      },
+      "indep_random_3": {
+        "solver_mask": "random_seed_8",
+        "checker_mask": "random_seed_9"
+      }
+    },
+    "output_path": "results/aamas_smollm2_team_s015_indeprand_metrics.json",
+    "predictions_path": "results/aamas_smollm2_team_s015_indeprand_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

@@ -1,0 +1,566 @@
+{
+  "bootstrap_samples": 10000,
+  "method": "paired_percentile_bootstrap_over_tasks",
+  "runs": {
+    "checker_s005": {
+      "prediction_count": 288,
+      "predictions_path": "results\\aamas_controlled_checker_s005_predictions.jsonl",
+      "roles": {
+        "critic": {
+          "comparisons": {
+            "generic": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.25,
+              "ci_low": -0.125,
+              "confidence": 0.95,
+              "difference": 0.0625,
+              "left_mean": 0.875,
+              "n_pairs": 16,
+              "right_mean": 0.8125
+            },
+            "incompatible_role_mean": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.4796875,
+              "ci_low": 0.166666666667,
+              "confidence": 0.95,
+              "difference": 0.333333333333,
+              "left_mean": 0.875,
+              "n_pairs": 16,
+              "right_mean": 0.541666666667
+            },
+            "planner": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.4375,
+              "ci_low": -0.1875,
+              "confidence": 0.95,
+              "difference": 0.125,
+              "left_mean": 0.875,
+              "n_pairs": 16,
+              "right_mean": 0.75
+            },
+            "random_mean": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.75,
+              "ci_low": 0.3125,
+              "confidence": 0.95,
+              "difference": 0.541666666667,
+              "left_mean": 0.875,
+              "n_pairs": 16,
+              "right_mean": 0.333333333333
+            },
+            "random_seed_1": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.75,
+              "ci_low": 0.1875,
+              "confidence": 0.95,
+              "difference": 0.5,
+              "left_mean": 0.875,
+              "n_pairs": 16,
+              "right_mean": 0.375
+            },
+            "random_seed_2": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.6875,
+              "ci_low": 0.0625,
+              "confidence": 0.95,
+              "difference": 0.375,
+              "left_mean": 0.875,
+              "n_pairs": 16,
+              "right_mean": 0.5
+            },
+            "random_seed_3": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.9375,
+              "ci_low": 0.5,
+              "confidence": 0.95,
+              "difference": 0.75,
+              "left_mean": 0.875,
+              "n_pairs": 16,
+              "right_mean": 0.125
+            },
+            "solver": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.9375,
+              "ci_low": 0.5,
+              "confidence": 0.95,
+              "difference": 0.75,
+              "left_mean": 0.875,
+              "n_pairs": 16,
+              "right_mean": 0.125
+            },
+            "unmasked": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.125,
+              "ci_low": -0.25,
+              "confidence": 0.95,
+              "difference": -0.0625,
+              "left_mean": 0.875,
+              "n_pairs": 16,
+              "right_mean": 0.9375
+            },
+            "verifier": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.3125,
+              "ci_low": 0.0,
+              "confidence": 0.95,
+              "difference": 0.125,
+              "left_mean": 0.875,
+              "n_pairs": 16,
+              "right_mean": 0.75
+            }
+          },
+          "n_tasks": 16,
+          "own_mask": "critic",
+          "own_mean": 0.875
+        },
+        "verifier": {
+          "comparisons": {
+            "critic": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.375,
+              "ci_low": -0.125,
+              "confidence": 0.95,
+              "difference": 0.125,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.8125
+            },
+            "generic": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.25,
+              "ci_low": -0.125,
+              "confidence": 0.95,
+              "difference": 0.0625,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.875
+            },
+            "incompatible_role_mean": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.75,
+              "ci_low": 0.395833333333,
+              "confidence": 0.95,
+              "difference": 0.604166666667,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.333333333333
+            },
+            "planner": {
+              "bootstrap_samples": 10000,
+              "ci_high": 1.0,
+              "ci_low": 0.4375,
+              "confidence": 0.95,
+              "difference": 0.75,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.1875
+            },
+            "random_mean": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.979166666667,
+              "ci_low": 0.645833333333,
+              "confidence": 0.95,
+              "difference": 0.833333333333,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.104166666667
+            },
+            "random_seed_1": {
+              "bootstrap_samples": 10000,
+              "ci_high": 1.0,
+              "ci_low": 0.4375,
+              "confidence": 0.95,
+              "difference": 0.75,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.1875
+            },
+            "random_seed_2": {
+              "bootstrap_samples": 10000,
+              "ci_high": 1.0,
+              "ci_low": 0.6875,
+              "confidence": 0.95,
+              "difference": 0.875,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.0625
+            },
+            "random_seed_3": {
+              "bootstrap_samples": 10000,
+              "ci_high": 1.0,
+              "ci_low": 0.6875,
+              "confidence": 0.95,
+              "difference": 0.875,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.0625
+            },
+            "solver": {
+              "bootstrap_samples": 10000,
+              "ci_high": 1.0,
+              "ci_low": 0.8125,
+              "confidence": 0.95,
+              "difference": 0.9375,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.0
+            },
+            "unmasked": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.375,
+              "ci_low": -0.125,
+              "confidence": 0.95,
+              "difference": 0.125,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.8125
+            }
+          },
+          "n_tasks": 16,
+          "own_mask": "verifier",
+          "own_mean": 0.9375
+        }
+      }
+    },
+    "solver_s005": {
+      "prediction_count": 144,
+      "predictions_path": "results\\aamas_controlled_low_sparsity_predictions.jsonl",
+      "roles": {
+        "solver": {
+          "comparisons": {
+            "critic": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.3125,
+              "ci_low": 0.0,
+              "confidence": 0.95,
+              "difference": 0.125,
+              "left_mean": 1.0,
+              "n_pairs": 16,
+              "right_mean": 0.875
+            },
+            "generic": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.5,
+              "ci_low": 0.0625,
+              "confidence": 0.95,
+              "difference": 0.25,
+              "left_mean": 1.0,
+              "n_pairs": 16,
+              "right_mean": 0.75
+            },
+            "incompatible_role_mean": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.375,
+              "ci_low": 0.125,
+              "confidence": 0.95,
+              "difference": 0.229166666667,
+              "left_mean": 1.0,
+              "n_pairs": 16,
+              "right_mean": 0.770833333333
+            },
+            "planner": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.375,
+              "ci_low": 0.0,
+              "confidence": 0.95,
+              "difference": 0.1875,
+              "left_mean": 1.0,
+              "n_pairs": 16,
+              "right_mean": 0.8125
+            },
+            "random_mean": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.625,
+              "ci_low": 0.375,
+              "confidence": 0.95,
+              "difference": 0.5,
+              "left_mean": 1.0,
+              "n_pairs": 16,
+              "right_mean": 0.5
+            },
+            "random_seed_1": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.875,
+              "ci_low": 0.4375,
+              "confidence": 0.95,
+              "difference": 0.6875,
+              "left_mean": 1.0,
+              "n_pairs": 16,
+              "right_mean": 0.3125
+            },
+            "random_seed_2": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.875,
+              "ci_low": 0.375,
+              "confidence": 0.95,
+              "difference": 0.625,
+              "left_mean": 1.0,
+              "n_pairs": 16,
+              "right_mean": 0.375
+            },
+            "random_seed_3": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.375,
+              "ci_low": 0.0,
+              "confidence": 0.95,
+              "difference": 0.1875,
+              "left_mean": 1.0,
+              "n_pairs": 16,
+              "right_mean": 0.8125
+            },
+            "unmasked": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.1875,
+              "ci_low": 0.0,
+              "confidence": 0.95,
+              "difference": 0.0625,
+              "left_mean": 1.0,
+              "n_pairs": 16,
+              "right_mean": 0.9375
+            },
+            "verifier": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.625,
+              "ci_low": 0.125,
+              "confidence": 0.95,
+              "difference": 0.375,
+              "left_mean": 1.0,
+              "n_pairs": 16,
+              "right_mean": 0.625
+            }
+          },
+          "n_tasks": 16,
+          "own_mask": "solver",
+          "own_mean": 1.0
+        }
+      }
+    },
+    "solver_s010": {
+      "prediction_count": 144,
+      "predictions_path": "results\\aamas_controlled_solver_s010_predictions.jsonl",
+      "roles": {
+        "solver": {
+          "comparisons": {
+            "critic": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.25,
+              "ci_low": -0.125,
+              "confidence": 0.95,
+              "difference": 0.0625,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.875
+            },
+            "generic": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.4375,
+              "ci_low": -0.0625,
+              "confidence": 0.95,
+              "difference": 0.1875,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.75
+            },
+            "incompatible_role_mean": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.3125,
+              "ci_low": 0.0,
+              "confidence": 0.95,
+              "difference": 0.166666666667,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.770833333333
+            },
+            "planner": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.1875,
+              "ci_low": -0.1875,
+              "confidence": 0.95,
+              "difference": 0.0,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.9375
+            },
+            "random_mean": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.854166666667,
+              "ci_low": 0.5625,
+              "confidence": 0.95,
+              "difference": 0.729166666667,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.208333333333
+            },
+            "random_seed_1": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.5625,
+              "ci_low": 0.0,
+              "confidence": 0.95,
+              "difference": 0.3125,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.625
+            },
+            "random_seed_2": {
+              "bootstrap_samples": 10000,
+              "ci_high": 1.0,
+              "ci_low": 0.8125,
+              "confidence": 0.95,
+              "difference": 0.9375,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.0
+            },
+            "random_seed_3": {
+              "bootstrap_samples": 10000,
+              "ci_high": 1.0,
+              "ci_low": 0.8125,
+              "confidence": 0.95,
+              "difference": 0.9375,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.0
+            },
+            "unmasked": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.1875,
+              "ci_low": -0.1875,
+              "confidence": 0.95,
+              "difference": 0.0,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.9375
+            },
+            "verifier": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.6875,
+              "ci_low": 0.1875,
+              "confidence": 0.95,
+              "difference": 0.4375,
+              "left_mean": 0.9375,
+              "n_pairs": 16,
+              "right_mean": 0.5
+            }
+          },
+          "n_tasks": 16,
+          "own_mask": "solver",
+          "own_mean": 0.9375
+        }
+      }
+    },
+    "solver_s020": {
+      "prediction_count": 144,
+      "predictions_path": "results\\aamas_controlled_solver_s020_predictions.jsonl",
+      "roles": {
+        "solver": {
+          "comparisons": {
+            "critic": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.25,
+              "ci_low": -0.375,
+              "confidence": 0.95,
+              "difference": -0.0625,
+              "left_mean": 0.3125,
+              "n_pairs": 16,
+              "right_mean": 0.375
+            },
+            "generic": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.1890625,
+              "ci_low": -0.5625,
+              "confidence": 0.95,
+              "difference": -0.1875,
+              "left_mean": 0.3125,
+              "n_pairs": 16,
+              "right_mean": 0.5
+            },
+            "incompatible_role_mean": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.083333333333,
+              "ci_low": -0.333333333333,
+              "confidence": 0.95,
+              "difference": -0.125,
+              "left_mean": 0.3125,
+              "n_pairs": 16,
+              "right_mean": 0.4375
+            },
+            "planner": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.3125,
+              "ci_low": -0.3125,
+              "confidence": 0.95,
+              "difference": 0.0,
+              "left_mean": 0.3125,
+              "n_pairs": 16,
+              "right_mean": 0.3125
+            },
+            "random_mean": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.395833333333,
+              "ci_low": -0.0625,
+              "confidence": 0.95,
+              "difference": 0.145833333333,
+              "left_mean": 0.3125,
+              "n_pairs": 16,
+              "right_mean": 0.166666666667
+            },
+            "random_seed_1": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.4375,
+              "ci_low": -0.0625,
+              "confidence": 0.95,
+              "difference": 0.1875,
+              "left_mean": 0.3125,
+              "n_pairs": 16,
+              "right_mean": 0.125
+            },
+            "random_seed_2": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.375,
+              "ci_low": -0.3125,
+              "confidence": 0.95,
+              "difference": 0.0,
+              "left_mean": 0.3125,
+              "n_pairs": 16,
+              "right_mean": 0.3125
+            },
+            "random_seed_3": {
+              "bootstrap_samples": 10000,
+              "ci_high": 0.5,
+              "ci_low": 0.0625,
+              "confidence": 0.95,
+              "difference": 0.25,
+              "left_mean": 0.3125,
+              "n_pairs": 16,
+              "right_mean": 0.0625
+            },
+            "unmasked": {
+              "bootstrap_samples": 10000,
+              "ci_high": -0.3125,
+              "ci_low": -0.875,
+              "confidence": 0.95,
+              "difference": -0.625,
+              "left_mean": 0.3125,
+              "n_pairs": 16,
+              "right_mean": 0.9375
+            },
+            "verifier": {
+              "bootstrap_samples": 10000,
+              "ci_high": -0.125,
+              "ci_low": -0.5625,
+              "confidence": 0.95,
+              "difference": -0.3125,
+              "left_mean": 0.3125,
+              "n_pairs": 16,
+              "right_mean": 0.625
+            }
+          },
+          "n_tasks": 16,
+          "own_mask": "solver",
+          "own_mean": 0.3125
+        }
+      }
+    }
+  },
+  "seed": 42
+}

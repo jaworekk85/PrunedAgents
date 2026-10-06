@@ -1,0 +1,7 @@
+{
+  "name": "gsm8k_tiny",
+  "calibration_size": 4,
+  "dev_size": 4,
+  "test_size": 4
+}
+

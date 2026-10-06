@@ -1,0 +1,59 @@
+
+=== Qwen-arith 5%
+  accuracy  persona:  checker_mask_only=0.479  generic=0.625  random_seed_1=0.750  random_seed_2=0.250  random_seed_3=0.708  role_specific=0.792  solver_mask_only=0.938  swapped=0.917  unmasked=0.396
+  accuracy  baseline: checker_mask_only=0.896  generic=0.812  random_seed_1=0.250  random_seed_2=0.458  random_seed_3=0.750  role_specific=0.646  solver_mask_only=0.667  swapped=0.875  unmasked=0.833
+  T1 swapped-role    persona +0.125 [+0.000, +0.271]    baseline +0.229 [+0.083, +0.375]*
+  T2 role-generic    persona +0.167 [-0.021, +0.354]    baseline -0.167 [-0.333, +0.000] 
+  S1 role-random     persona +0.222 [+0.076, +0.361]*   baseline +0.160 [+0.000, +0.306] 
+  S2 role-unmasked   persona +0.396 [+0.250, +0.542]*   baseline -0.188 [-0.333, -0.042]*
+  S3 solver-verifier Jaccard: persona 0.143  baseline 0.159 | critic-verifier: persona 0.297  baseline 0.654
+
+=== Qwen-arith 10%
+  accuracy  persona:  checker_mask_only=0.583  generic=0.896  random_seed_1=0.521  random_seed_2=0.396  random_seed_3=0.062  role_specific=0.750  solver_mask_only=0.938  swapped=0.938  unmasked=0.396
+  accuracy  baseline: checker_mask_only=0.875  generic=0.854  random_seed_1=0.271  random_seed_2=0.167  random_seed_3=0.208  role_specific=0.729  solver_mask_only=0.812  swapped=0.812  unmasked=0.833
+  T1 swapped-role    persona +0.188 [+0.042, +0.333]*   baseline +0.083 [-0.083, +0.250] 
+  T2 role-generic    persona -0.146 [-0.271, -0.021]*   baseline -0.125 [-0.292, +0.042] 
+  S1 role-random     persona +0.424 [+0.278, +0.556]*   baseline +0.514 [+0.368, +0.646]*
+  S2 role-unmasked   persona +0.354 [+0.167, +0.521]*   baseline -0.104 [-0.271, +0.062] 
+  S3 solver-verifier Jaccard: persona 0.190  baseline 0.216 | critic-verifier: persona 0.360  baseline 0.699
+
+=== Qwen-arith 15%
+  accuracy  persona:  checker_mask_only=0.438  generic=0.750  random_seed_1=0.083  random_seed_2=0.104  random_seed_3=0.021  role_specific=0.708  solver_mask_only=0.771  swapped=0.979  unmasked=0.396
+  accuracy  baseline: checker_mask_only=0.896  generic=0.667  random_seed_1=0.167  random_seed_2=0.208  random_seed_3=0.021  role_specific=0.854  solver_mask_only=0.896  swapped=0.792  unmasked=0.833
+  T1 swapped-role    persona +0.271 [+0.125, +0.417]*   baseline -0.062 [-0.208, +0.083] 
+  T2 role-generic    persona -0.042 [-0.208, +0.125]    baseline +0.188 [+0.042, +0.333]*
+  S1 role-random     persona +0.639 [+0.514, +0.764]*   baseline +0.722 [+0.604, +0.833]*
+  S2 role-unmasked   persona +0.312 [+0.125, +0.500]*   baseline +0.021 [-0.125, +0.167] 
+  S3 solver-verifier Jaccard: persona 0.233  baseline 0.262 | critic-verifier: persona 0.412  baseline 0.740
+
+=== bAbI 5%
+  accuracy  persona:  checker_mask_only=0.438  generic=0.542  random_seed_1=0.167  random_seed_2=0.521  random_seed_3=0.208  role_specific=0.458  solver_mask_only=0.417  swapped=0.521  unmasked=0.458
+  accuracy  baseline: checker_mask_only=0.458  generic=0.542  random_seed_1=0.104  random_seed_2=0.333  random_seed_3=0.167  role_specific=0.354  solver_mask_only=0.458  swapped=0.479  unmasked=0.542
+  T1 swapped-role    persona +0.062 [-0.104, +0.229]    baseline +0.125 [-0.042, +0.292] 
+  T2 role-generic    persona -0.083 [-0.250, +0.083]    baseline -0.188 [-0.292, -0.083]*
+  S1 role-random     persona +0.160 [+0.028, +0.292]*   baseline +0.153 [+0.042, +0.271]*
+  S2 role-unmasked   persona +0.000 [-0.167, +0.167]    baseline -0.188 [-0.312, -0.062]*
+  S3 solver-verifier Jaccard: persona 0.067  baseline 0.067 | critic-verifier: persona 0.137  baseline 0.597
+
+=== bAbI 10%
+  accuracy  persona:  checker_mask_only=0.396  generic=0.583  random_seed_1=0.000  random_seed_2=0.375  random_seed_3=0.354  role_specific=0.417  solver_mask_only=0.479  swapped=0.458  unmasked=0.458
+  accuracy  baseline: checker_mask_only=0.521  generic=0.521  random_seed_1=0.000  random_seed_2=0.167  random_seed_3=0.396  role_specific=0.562  solver_mask_only=0.521  swapped=0.625  unmasked=0.542
+  T1 swapped-role    persona +0.042 [-0.104, +0.188]    baseline +0.062 [-0.083, +0.208] 
+  T2 role-generic    persona -0.167 [-0.312, -0.021]*   baseline +0.042 [-0.083, +0.167] 
+  S1 role-random     persona +0.174 [+0.056, +0.299]*   baseline +0.375 [+0.229, +0.514]*
+  S2 role-unmasked   persona -0.042 [-0.188, +0.104]    baseline +0.021 [-0.104, +0.146] 
+  S3 solver-verifier Jaccard: persona 0.119  baseline 0.119 | critic-verifier: persona 0.198  baseline 0.664
+
+=== bAbI 15%
+  accuracy  persona:  checker_mask_only=0.438  generic=0.479  random_seed_1=0.000  random_seed_2=0.354  random_seed_3=0.000  role_specific=0.333  solver_mask_only=0.312  swapped=0.542  unmasked=0.458
+  accuracy  baseline: checker_mask_only=0.542  generic=0.521  random_seed_1=0.000  random_seed_2=0.354  random_seed_3=0.000  role_specific=0.500  solver_mask_only=0.500  swapped=0.438  unmasked=0.542
+  T1 swapped-role    persona +0.208 [+0.062, +0.354]*   baseline -0.062 [-0.229, +0.104] 
+  T2 role-generic    persona -0.146 [-0.312, +0.021]    baseline -0.021 [-0.146, +0.125] 
+  S1 role-random     persona +0.215 [+0.097, +0.333]*   baseline +0.382 [+0.243, +0.521]*
+  S2 role-unmasked   persona -0.125 [-0.271, +0.021]    baseline -0.042 [-0.188, +0.104] 
+  S3 solver-verifier Jaccard: persona 0.166  baseline 0.169 | critic-verifier: persona 0.251  baseline 0.703
+
+=== Pre-registered decision (12 primary tests)
+  significant in specialization direction: 0 []
+  significant in opposite direction:       5 ['Qwen-arith 10% T1', 'Qwen-arith 10% T2', 'Qwen-arith 15% T1', 'bAbI 10% T2', 'bAbI 15% T1']
+  verdict: Shared-core conclusion extends to persona roles

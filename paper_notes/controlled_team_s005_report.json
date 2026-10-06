@@ -1,0 +1,433 @@
+{
+  "bootstrap_samples": 10000,
+  "comparisons_to_random_mean": {
+    "checker_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.541666666667,
+      "ci_low": 0.222222222222,
+      "confidence": 0.95,
+      "difference": 0.388888888889,
+      "left_mean": 0.770833333333,
+      "n_pairs": 48,
+      "right_mean": 0.381944444444
+    },
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.340277777778,
+      "ci_low": -0.020833333333,
+      "confidence": 0.95,
+      "difference": 0.159722222222,
+      "left_mean": 0.541666666667,
+      "n_pairs": 48,
+      "right_mean": 0.381944444444
+    },
+    "role_specific": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.472222222222,
+      "ci_low": 0.138888888889,
+      "confidence": 0.95,
+      "difference": 0.305555555556,
+      "left_mean": 0.6875,
+      "n_pairs": 48,
+      "right_mean": 0.381944444444
+    },
+    "solver_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.493055555556,
+      "ci_low": 0.145833333333,
+      "confidence": 0.95,
+      "difference": 0.326388888889,
+      "left_mean": 0.708333333333,
+      "n_pairs": 48,
+      "right_mean": 0.381944444444
+    },
+    "swapped": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.493055555556,
+      "ci_low": 0.152777777778,
+      "confidence": 0.95,
+      "difference": 0.326388888889,
+      "left_mean": 0.708333333333,
+      "n_pairs": 48,
+      "right_mean": 0.381944444444
+    },
+    "unmasked": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.458333333333,
+      "ci_low": 0.152777777778,
+      "confidence": 0.95,
+      "difference": 0.305555555556,
+      "left_mean": 0.6875,
+      "n_pairs": 48,
+      "right_mean": 0.381944444444
+    }
+  },
+  "comparisons_to_role_specific": {
+    "checker_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.270833333333,
+      "ci_low": -0.104166666667,
+      "confidence": 0.95,
+      "difference": 0.083333333333,
+      "left_mean": 0.770833333333,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.041666666667,
+      "ci_low": -0.333333333333,
+      "confidence": 0.95,
+      "difference": -0.145833333333,
+      "left_mean": 0.541666666667,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "random_seed_1": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.291666666667,
+      "ci_low": -0.666666666667,
+      "confidence": 0.95,
+      "difference": -0.479166666667,
+      "left_mean": 0.208333333333,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "random_seed_2": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.083333333333,
+      "ci_low": -0.5,
+      "confidence": 0.95,
+      "difference": -0.291666666667,
+      "left_mean": 0.395833333333,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "random_seed_3": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.041666666667,
+      "ci_low": -0.333333333333,
+      "confidence": 0.95,
+      "difference": -0.145833333333,
+      "left_mean": 0.541666666667,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "solver_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.145833333333,
+      "ci_low": -0.125,
+      "confidence": 0.95,
+      "difference": 0.020833333333,
+      "left_mean": 0.708333333333,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "swapped": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.1875,
+      "ci_low": -0.145833333333,
+      "confidence": 0.95,
+      "difference": 0.020833333333,
+      "left_mean": 0.708333333333,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "unmasked": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.1875,
+      "ci_low": -0.1875,
+      "confidence": 0.95,
+      "difference": 0.0,
+      "left_mean": 0.6875,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    }
+  },
+  "comparisons_to_unmasked": {
+    "checker_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.25,
+      "ci_low": -0.083333333333,
+      "confidence": 0.95,
+      "difference": 0.083333333333,
+      "left_mean": 0.770833333333,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.041666666667,
+      "ci_low": -0.333333333333,
+      "confidence": 0.95,
+      "difference": -0.145833333333,
+      "left_mean": 0.541666666667,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "random_seed_1": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.291666666667,
+      "ci_low": -0.645833333333,
+      "confidence": 0.95,
+      "difference": -0.479166666667,
+      "left_mean": 0.208333333333,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "random_seed_2": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.125,
+      "ci_low": -0.458333333333,
+      "confidence": 0.95,
+      "difference": -0.291666666667,
+      "left_mean": 0.395833333333,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "random_seed_3": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.0625,
+      "ci_low": -0.333333333333,
+      "confidence": 0.95,
+      "difference": -0.145833333333,
+      "left_mean": 0.541666666667,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "role_specific": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.1875,
+      "ci_low": -0.1875,
+      "confidence": 0.95,
+      "difference": 0.0,
+      "left_mean": 0.6875,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "solver_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.208333333333,
+      "ci_low": -0.166666666667,
+      "confidence": 0.95,
+      "difference": 0.020833333333,
+      "left_mean": 0.708333333333,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    },
+    "swapped": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.1875,
+      "ci_low": -0.145833333333,
+      "confidence": 0.95,
+      "difference": 0.020833333333,
+      "left_mean": 0.708333333333,
+      "n_pairs": 48,
+      "right_mean": 0.6875
+    }
+  },
+  "conditions": {
+    "checker_mask_only": {
+      "checker_decision_accuracy": 0.4375,
+      "correction_rate": 0.6896551724137931,
+      "final_accuracy": 0.7708333333333334,
+      "final_accuracy_ci": {
+        "high": 0.875,
+        "low": 0.6458333333333334
+      },
+      "net_accuracy_gain": 0.375,
+      "preservation_rate": 0.8947368421052632,
+      "solver_accuracy": 0.3958333333333333,
+      "solver_accuracy_ci": {
+        "high": 0.5416666666666666,
+        "low": 0.25
+      },
+      "solver_correct_count": 19,
+      "solver_error_count": 29,
+      "task_count": 48
+    },
+    "generic": {
+      "checker_decision_accuracy": 0.10416666666666667,
+      "correction_rate": 0.36,
+      "final_accuracy": 0.5416666666666666,
+      "final_accuracy_ci": {
+        "high": 0.6875,
+        "low": 0.3958333333333333
+      },
+      "net_accuracy_gain": 0.0625,
+      "preservation_rate": 0.7391304347826086,
+      "solver_accuracy": 0.4791666666666667,
+      "solver_accuracy_ci": {
+        "high": 0.625,
+        "low": 0.3333333333333333
+      },
+      "solver_correct_count": 23,
+      "solver_error_count": 25,
+      "task_count": 48
+    },
+    "random_seed_1": {
+      "checker_decision_accuracy": 0.16666666666666666,
+      "correction_rate": 0.0975609756097561,
+      "final_accuracy": 0.20833333333333334,
+      "final_accuracy_ci": {
+        "high": 0.3333333333333333,
+        "low": 0.10416666666666667
+      },
+      "net_accuracy_gain": 0.0625,
+      "preservation_rate": 0.8571428571428571,
+      "solver_accuracy": 0.14583333333333334,
+      "solver_accuracy_ci": {
+        "high": 0.25,
+        "low": 0.0625
+      },
+      "solver_correct_count": 7,
+      "solver_error_count": 41,
+      "task_count": 48
+    },
+    "random_seed_2": {
+      "checker_decision_accuracy": 0.08333333333333333,
+      "correction_rate": 0.22857142857142856,
+      "final_accuracy": 0.3958333333333333,
+      "final_accuracy_ci": {
+        "high": 0.5416666666666666,
+        "low": 0.25
+      },
+      "net_accuracy_gain": 0.125,
+      "preservation_rate": 0.8461538461538461,
+      "solver_accuracy": 0.2708333333333333,
+      "solver_accuracy_ci": {
+        "high": 0.3958333333333333,
+        "low": 0.14583333333333334
+      },
+      "solver_correct_count": 13,
+      "solver_error_count": 35,
+      "task_count": 48
+    },
+    "random_seed_3": {
+      "checker_decision_accuracy": 0.5208333333333334,
+      "correction_rate": 0.32142857142857145,
+      "final_accuracy": 0.5416666666666666,
+      "final_accuracy_ci": {
+        "high": 0.6875,
+        "low": 0.3958333333333333
+      },
+      "net_accuracy_gain": 0.125,
+      "preservation_rate": 0.85,
+      "solver_accuracy": 0.4166666666666667,
+      "solver_accuracy_ci": {
+        "high": 0.5625,
+        "low": 0.2708333333333333
+      },
+      "solver_correct_count": 20,
+      "solver_error_count": 28,
+      "task_count": 48
+    },
+    "role_specific": {
+      "checker_decision_accuracy": 0.5625,
+      "correction_rate": 0.6153846153846154,
+      "final_accuracy": 0.6875,
+      "final_accuracy_ci": {
+        "high": 0.8125,
+        "low": 0.5625
+      },
+      "net_accuracy_gain": 0.5,
+      "preservation_rate": 1.0,
+      "solver_accuracy": 0.1875,
+      "solver_accuracy_ci": {
+        "high": 0.3125,
+        "low": 0.08333333333333333
+      },
+      "solver_correct_count": 9,
+      "solver_error_count": 39,
+      "task_count": 48
+    },
+    "solver_mask_only": {
+      "checker_decision_accuracy": 0.5625,
+      "correction_rate": 0.6666666666666666,
+      "final_accuracy": 0.7083333333333334,
+      "final_accuracy_ci": {
+        "high": 0.8333333333333334,
+        "low": 0.5833333333333334
+      },
+      "net_accuracy_gain": 0.5208333333333334,
+      "preservation_rate": 0.8888888888888888,
+      "solver_accuracy": 0.1875,
+      "solver_accuracy_ci": {
+        "high": 0.3125,
+        "low": 0.08333333333333333
+      },
+      "solver_correct_count": 9,
+      "solver_error_count": 39,
+      "task_count": 48
+    },
+    "swapped": {
+      "checker_decision_accuracy": 0.2708333333333333,
+      "correction_rate": 0.45454545454545453,
+      "final_accuracy": 0.7083333333333334,
+      "final_accuracy_ci": {
+        "high": 0.8333333333333334,
+        "low": 0.5833333333333334
+      },
+      "net_accuracy_gain": 0.16666666666666666,
+      "preservation_rate": 0.9230769230769231,
+      "solver_accuracy": 0.5416666666666666,
+      "solver_accuracy_ci": {
+        "high": 0.6875,
+        "low": 0.3958333333333333
+      },
+      "solver_correct_count": 26,
+      "solver_error_count": 22,
+      "task_count": 48
+    },
+    "unmasked": {
+      "checker_decision_accuracy": 0.375,
+      "correction_rate": 0.5172413793103449,
+      "final_accuracy": 0.6875,
+      "final_accuracy_ci": {
+        "high": 0.8125,
+        "low": 0.5625
+      },
+      "net_accuracy_gain": 0.2916666666666667,
+      "preservation_rate": 0.9473684210526315,
+      "solver_accuracy": 0.3958333333333333,
+      "solver_accuracy_ci": {
+        "high": 0.5416666666666666,
+        "low": 0.25
+      },
+      "solver_correct_count": 19,
+      "solver_error_count": 29,
+      "task_count": 48
+    }
+  },
+  "metrics_paths": [
+    "results\\aamas_controlled_team_s005_metrics.json",
+    "results\\aamas_controlled_team_followup_s005_metrics.json"
+  ],
+  "predictions_paths": [
+    "results\\aamas_controlled_team_s005_predictions.jsonl",
+    "results\\aamas_controlled_team_followup_s005_predictions.jsonl"
+  ],
+  "random_mean": {
+    "checker_decision_accuracy": 0.2569444444444444,
+    "correction_rate": 0.21585365853658536,
+    "final_accuracy": 0.3819444444444444,
+    "final_accuracy_ci": {
+      "high": 0.4652777777777779,
+      "low": 0.2986111111111111
+    },
+    "net_accuracy_gain": 0.10416666666666656,
+    "preservation_rate": 0.8510989010989011,
+    "random_conditions": [
+      "random_seed_1",
+      "random_seed_2",
+      "random_seed_3"
+    ],
+    "solver_accuracy": 0.27777777777777785,
+    "solver_accuracy_ci": {
+      "high": 0.34027777777777773,
+      "low": 0.2222222222222222
+    },
+    "task_count": 48
+  },
+  "seed": 42
+}

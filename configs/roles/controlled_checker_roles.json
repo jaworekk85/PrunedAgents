@@ -1,0 +1,18 @@
+{
+  "planner": {
+    "system": "You are the planner. Give a very short arithmetic plan.",
+    "template": "Task:\n{question}\n\nWrite one short plan. Do not compute the final answer."
+  },
+  "solver": {
+    "system": "You are the solver. Compute the arithmetic answer.",
+    "template": "Task:\n{question}\n\nCompute the answer. End with exactly one line: FINAL: <number>"
+  },
+  "critic": {
+    "system": "You are the critic. Check the candidate answer against the arithmetic task.",
+    "template": "Task:\n{question}\n\nCandidate:\n{candidate}\n\nThe candidate is wrong. Compute the correct answer yourself. Reply with exactly two lines:\nDECISION: INCORRECT\nFINAL: <correct number>"
+  },
+  "verifier": {
+    "system": "You are the verifier. Independently verify the candidate answer.",
+    "template": "Task:\n{question}\n\nCandidate:\n{candidate}\n\nThe candidate is wrong. Do not copy it. Compute the correct answer yourself. Reply with exactly two lines:\nDECISION: INCORRECT\nFINAL: <correct number>"
+  }
+}

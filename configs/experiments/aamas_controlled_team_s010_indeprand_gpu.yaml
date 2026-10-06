@@ -1,0 +1,79 @@
+{
+  "seed": 42,
+  "run_name": "aamas_controlled_team_s010_indeprand_gpu",
+  "model": {
+    "id": "Qwen/Qwen3-0.6B",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 32
+  },
+  "benchmark": {
+    "name": "controlled_arithmetic",
+    "split_strategy": "template_disjoint",
+    "calibration_size": 24,
+    "dev_size": 8,
+    "test_size": 48
+  },
+  "roles": {
+    "names": [
+      "planner",
+      "solver",
+      "critic",
+      "verifier"
+    ],
+    "prompt_file": "configs/roles/controlled_checker_roles.json"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1e-08
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [
+      0.1
+    ],
+    "per_layer_ratio": true,
+    "random_seeds": [
+      1,
+      2,
+      3
+    ]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/aamas_controlled_confirmatory_stats.json",
+    "output_template": "artifacts/masks/aamas_controlled_confirmatory_s010_{sparsity}.json",
+    "source": "aamas_controlled_confirmatory_s005_gpu"
+  },
+  "team_eval": {
+    "split": "test",
+    "max_items": 48,
+    "max_new_tokens": 32,
+    "checker_role": "verifier",
+    "bootstrap_samples": 10000,
+    "reference_condition": "indep_random_1",
+    "masks_path": "artifacts/masks/aamas_controlled_confirmatory_s010_0.1_indeprand.json",
+    "conditions": {
+      "indep_random_1": {
+        "solver_mask": "random_seed_4",
+        "checker_mask": "random_seed_5"
+      },
+      "indep_random_2": {
+        "solver_mask": "random_seed_6",
+        "checker_mask": "random_seed_7"
+      },
+      "indep_random_3": {
+        "solver_mask": "random_seed_8",
+        "checker_mask": "random_seed_9"
+      }
+    },
+    "output_path": "results/aamas_controlled_team_s010_indeprand_metrics.json",
+    "predictions_path": "results/aamas_controlled_team_s010_indeprand_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

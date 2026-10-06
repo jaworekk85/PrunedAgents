@@ -1,0 +1,13 @@
+{
+  "seed": 42,
+  "run_name": "hf_generation_test",
+  "model": {
+    "id": "Qwen/Qwen3-0.6B",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 32
+  }
+}
+

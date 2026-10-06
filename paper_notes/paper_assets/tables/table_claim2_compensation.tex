@@ -1,0 +1,29 @@
+% Table: Claim 2a -- team-level robustness across calibration draws (Qwen-arithmetic)
+% Requires: \usepackage{booktabs}
+\begin{table}[t]
+\centering
+\caption{Team-level robustness: role-derived minus unmasked team accuracy (Role $-$ unmasked) across the
+original calibration draw and three independent bootstrap resamples of the calibration set
+(seeds 101/202/303), at each sparsity, Qwen-arithmetic. The difference is statistically
+indistinguishable from zero in 11 of 12 draw--sparsity combinations; the sole exception is
+the original draw at 5\%.}
+\label{tab:claim2-robustness}
+\begin{tabular}{lrrr}
+\toprule
+Calibration draw & 5\% & 10\% & 15\% \\
+\midrule
+Original (confirmatory) & $\mathbf{-0.1875^{*}}$ & $-0.1042$ & $+0.0208$ \\
+Resample, seed 101       & $+0.0625$ & $+0.0417$ & $-0.0208$ \\
+Resample, seed 202       & $-0.1458$ & $+0.0417$ & $-0.0417$ \\
+Resample, seed 303       & $+0.0000$ & $+0.0417$ & $+0.0000$ \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\footnotesize $^{*}$Significant at 95\% ($[-0.3333, -0.0417]$); all other cells have CIs crossing
+zero. Full CIs for every cell: original 5\% $[-0.3333,-0.0417]$; original 10\%
+$[-0.2708,0.0625]$; original 15\% $[-0.1250,0.1667]$; seed 101 5\% $[-0.0625,0.1875]$, 10\%
+$[-0.1042,0.1875]$, 15\% $[-0.1667,0.1250]$; seed 202 5\% $[-0.2917,0.0000]$, 10\%
+$[-0.0833,0.1667]$, 15\% $[-0.1875,0.1042]$; seed 303 5\% $[-0.1458,0.1458]$, 10\%
+$[-0.0833,0.1667]$, 15\% $[-0.1458,0.1458]$.
+\end{table}

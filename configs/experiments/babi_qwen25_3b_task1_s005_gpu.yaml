@@ -1,0 +1,104 @@
+{
+  "seed": 42,
+  "run_name": "babi_qwen25_3b_task1_s005_gpu",
+  "model": {
+    "id": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 48,
+    "quantization": "int4",
+    "use_chat_template": true
+  },
+  "benchmark": {
+    "name": "babi",
+    "task": 1,
+    "calibration_size": 24,
+    "dev_size": 8,
+    "test_size": 48
+  },
+  "roles": {
+    "names": [
+      "planner",
+      "solver",
+      "critic",
+      "verifier"
+    ],
+    "prompt_file": "configs/roles/babi_checker_roles.json"
+  },
+  "activation_collection": {
+    "split": "calibration",
+    "max_pairs": 96,
+    "output_path": "artifacts/activation_stats/babi_qwen25_3b_task1_s005_stats.json",
+    "response_cache_path": "artifacts/cached_responses/babi_qwen25_3b_task1_s005.jsonl"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1e-08
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [
+      0.05
+    ],
+    "per_layer_ratio": true,
+    "random_seeds": [
+      1,
+      2,
+      3
+    ]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/babi_qwen25_3b_task1_s005_stats.json",
+    "output_template": "artifacts/masks/babi_qwen25_3b_task1_s005_{sparsity}.json",
+    "source": "babi_qwen25_3b_task1_s005_gpu"
+  },
+  "team_eval": {
+    "split": "test",
+    "max_items": 48,
+    "max_new_tokens": 48,
+    "checker_role": "verifier",
+    "bootstrap_samples": 10000,
+    "reference_condition": "unmasked",
+    "solver_instruction": "",
+    "checker_instruction": "",
+    "answer_kind": "location",
+    "solver_reply_line": "Answer with exactly one line: FINAL: <word>",
+    "checker_reply_line": "Reply with exactly two lines:\nFINAL: <the correct room name, e.g. kitchen>\nDECISION: <CORRECT or INCORRECT>",
+    "masks_path": "artifacts/masks/babi_qwen25_3b_task1_s005_0.05.json",
+    "conditions": {
+      "unmasked": {
+        "solver_mask": "unmasked",
+        "checker_mask": "unmasked"
+      },
+      "role_specific": {
+        "solver_mask": "solver",
+        "checker_mask": "verifier"
+      },
+      "generic": {
+        "solver_mask": "generic",
+        "checker_mask": "generic"
+      },
+      "random_seed_1": {
+        "solver_mask": "random_seed_1",
+        "checker_mask": "random_seed_1"
+      },
+      "random_seed_2": {
+        "solver_mask": "random_seed_2",
+        "checker_mask": "random_seed_2"
+      },
+      "random_seed_3": {
+        "solver_mask": "random_seed_3",
+        "checker_mask": "random_seed_3"
+      }
+    },
+    "output_path": "results/babi_qwen25_3b_task1_s005_metrics.json",
+    "predictions_path": "results/babi_qwen25_3b_task1_s005_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

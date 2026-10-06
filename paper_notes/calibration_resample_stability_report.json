@@ -1,0 +1,74 @@
+{
+  "interpretation_note": "Pruned-unit Jaccard compares the same role's mask across calibration draws; own_minus_random_mean_accuracy compares own-role mask accuracy against the mean of the three fixed random-mask seeds, which do not depend on calibration data.",
+  "labels": [
+    "confirmatory",
+    "seed101",
+    "seed202",
+    "seed303"
+  ],
+  "own_minus_random_mean_accuracy": {
+    "critic": {
+      "confirmatory": 0.2986111111113333,
+      "seed101": 0.152777777778,
+      "seed202": 0.2986111111113333,
+      "seed303": 0.46527777777799995
+    },
+    "solver": {
+      "confirmatory": -0.03472222222233334,
+      "seed101": 0.21527777777766666,
+      "seed202": 0.11111111111099992,
+      "seed303": 0.1944444444443333
+    },
+    "verifier": {
+      "confirmatory": 0.34722222222233334,
+      "seed101": 0.4305555555556667,
+      "seed202": 0.3680555555556667,
+      "seed303": 0.5555555555556667
+    }
+  },
+  "primary_roles": [
+    "solver",
+    "critic",
+    "verifier"
+  ],
+  "pruned_unit_jaccard": {
+    "critic": {
+      "confirmatory|seed101": 0.8514383855732074,
+      "confirmatory|seed202": 0.8075875078599875,
+      "confirmatory|seed303": 0.7921862011637573,
+      "seed101|seed202": 0.7549857549857549,
+      "seed101|seed303": 0.7697516930022573,
+      "seed202|seed303": 0.6755391490188459
+    },
+    "planner": {
+      "confirmatory|seed101": 0.8427350427350427,
+      "confirmatory|seed202": 0.8341131433432581,
+      "confirmatory|seed303": 0.8376305135307905,
+      "seed101|seed202": 0.7807144332025604,
+      "seed101|seed303": 0.7661273807085808,
+      "seed202|seed303": 0.7582059123343527
+    },
+    "solver": {
+      "confirmatory|seed101": 0.7970410502187956,
+      "confirmatory|seed202": 0.7701149425287356,
+      "confirmatory|seed303": 0.8174920969441517,
+      "seed101|seed202": 0.75177737152143,
+      "seed101|seed303": 0.738359201773836,
+      "seed202|seed303": 0.7040110650069157
+    },
+    "verifier": {
+      "confirmatory|seed101": 0.8247989843419382,
+      "confirmatory|seed202": 0.8038067349926794,
+      "confirmatory|seed303": 0.8106235565819861,
+      "seed101|seed202": 0.8060732984293194,
+      "seed101|seed303": 0.7748507923441037,
+      "seed202|seed303": 0.7019932899151372
+    }
+  },
+  "roles": [
+    "planner",
+    "solver",
+    "critic",
+    "verifier"
+  ]
+}

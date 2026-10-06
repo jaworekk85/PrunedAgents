@@ -1,0 +1,62 @@
+{
+  "interpretation_note": "At mild sparsity, kept-unit overlap is mechanically high; pruned-unit overlap is the more discriminating view.",
+  "kept_unit_jaccard": {
+    "critic": {
+      "critic": 1.0,
+      "planner": 0.919872171440656,
+      "solver": 0.9300765378437116,
+      "verifier": 0.9776825696511994
+    },
+    "planner": {
+      "critic": 0.919872171440656,
+      "planner": 1.0,
+      "solver": 0.9235106470636705,
+      "verifier": 0.9207748548322636
+    },
+    "solver": {
+      "critic": 0.9300765378437116,
+      "planner": 0.9235106470636705,
+      "solver": 1.0,
+      "verifier": 0.9256413580174171
+    },
+    "verifier": {
+      "critic": 0.9776825696511994,
+      "planner": 0.9207748548322636,
+      "solver": 0.9256413580174171,
+      "verifier": 1.0
+    }
+  },
+  "masks_path": "artifacts\\masks\\aamas_controlled_confirmatory_s005_0.05.json",
+  "pruned_unit_jaccard": {
+    "critic": {
+      "critic": 1.0,
+      "planner": 0.1168091168091168,
+      "solver": 0.1859185918591859,
+      "verifier": 0.6476881925869316
+    },
+    "planner": {
+      "critic": 0.1168091168091168,
+      "planner": 1.0,
+      "solver": 0.1405898690649385,
+      "verifier": 0.12262431658422286
+    },
+    "solver": {
+      "critic": 0.1859185918591859,
+      "planner": 0.1405898690649385,
+      "solver": 1.0,
+      "verifier": 0.15494843980179457
+    },
+    "verifier": {
+      "critic": 0.6476881925869316,
+      "planner": 0.12262431658422286,
+      "solver": 0.15494843980179457,
+      "verifier": 1.0
+    }
+  },
+  "roles": [
+    "planner",
+    "solver",
+    "critic",
+    "verifier"
+  ]
+}

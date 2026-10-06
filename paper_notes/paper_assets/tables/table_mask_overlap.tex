@@ -1,0 +1,21 @@
+% Table: Pruned-unit Jaccard overlap between role pairs (5% sparsity, post-fix masks)
+% Requires: \usepackage{booktabs}
+\begin{table}[t]
+\centering
+\caption{Pruned-unit Jaccard overlap between role-pair masks at 5\% sparsity. Critic and
+verifier masks overlap far more with each other than any other role pair, in every
+model/domain tested, consistent with their near-identical calibration instructions.}
+\label{tab:mask-overlap}
+\begin{tabular}{lrrr}
+\toprule
+Role pair & Qwen-arithmetic & SmolLM2-arithmetic & bAbI (SmolLM2) \\
+\midrule
+Planner--Solver   & 0.1469 & 0.0311 & 0.1677 \\
+Planner--Critic   & 0.1176 & 0.0111 & 0.0385 \\
+Planner--Verifier & 0.1241 & 0.0121 & 0.0426 \\
+Solver--Critic    & 0.1884 & 0.0855 & 0.0654 \\
+Solver--Verifier  & 0.1588 & 0.0871 & 0.0672 \\
+\textbf{Critic--Verifier} & \textbf{0.6542} & \textbf{0.7545} & \textbf{0.5966} \\
+\bottomrule
+\end{tabular}
+\end{table}

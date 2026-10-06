@@ -1,0 +1,19 @@
+% Table: entropy/distribution diagnostic across all available HF activation-stats checkpoints
+% Requires: \usepackage{booktabs}
+\begin{table}[t]
+\centering
+\caption{Distributional sharpness of the raw per-unit importance signal (solver role), across
+all 16 main-run activation-stats checkpoints (persona-probe statistics excluded). Qwen2.5-3B/int4 (where Claim~1 does not replicate)
+has a measurably flatter distribution than both models where it does, tracking model size
+monotonically rather than a binary FP16-vs-int4 split. Descriptive statistics; no bootstrap CI.}
+\label{tab:entropy-diagnostic}
+\begin{tabular}{lrrrr}
+\toprule
+Model & Checkpoints & CV range & Top-5\% mass & Norm.\ entropy range \\
+\midrule
+Qwen3-0.6B (FP16)        & 10 & $3.33$--$3.95$ & $34.8$--$36.7\%$ & $0.9260$--$0.9304$ \\
+SmolLM2-1.7B (int8)      & 3  & $2.70$--$3.34$ & $31.4$--$32.8\%$ & $0.9345$--$0.9368$ \\
+Qwen2.5-3B (int4)        & 3  & $2.39$--$2.69$ & $24.2$--$25.9\%$ & $0.9569$--$0.9610$ \\
+\bottomrule
+\end{tabular}
+\end{table}

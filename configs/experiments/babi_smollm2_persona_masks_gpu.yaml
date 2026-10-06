@@ -1,0 +1,65 @@
+{
+  "seed": 42,
+  "run_name": "babi_smollm2_persona_masks_gpu",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 48,
+    "quantization": "int8",
+    "use_chat_template": true
+  },
+  "benchmark": {
+    "name": "babi",
+    "task": 1,
+    "calibration_size": 24,
+    "dev_size": 8,
+    "test_size": 48
+  },
+  "roles": {
+    "names": [
+      "planner",
+      "solver",
+      "critic",
+      "verifier"
+    ],
+    "prompt_file": "configs/roles/babi_checker_roles.json",
+    "include_system_prompt": true
+  },
+  "activation_collection": {
+    "split": "calibration",
+    "max_pairs": 96,
+    "output_path": "artifacts/activation_stats/babi_persona_stats.json",
+    "response_cache_path": "artifacts/cached_responses/babi_persona.jsonl"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1e-08
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [
+      0.05,
+      0.1,
+      0.15
+    ],
+    "per_layer_ratio": true,
+    "random_seeds": [
+      1,
+      2,
+      3
+    ]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/babi_persona_stats.json",
+    "output_template": "artifacts/masks/babi_persona_{sparsity}.json",
+    "source": "babi_smollm2_persona_masks_gpu"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "seed": 42,
+  "run_name": "babi_smollm2_persona_team_s015_shared10_gpu",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 48,
+    "quantization": "int8",
+    "use_chat_template": true
+  },
+  "benchmark": {
+    "name": "babi",
+    "task": 1,
+    "calibration_size": 24,
+    "dev_size": 8,
+    "test_size": 48
+  },
+  "roles": {
+    "names": [
+      "planner",
+      "solver",
+      "critic",
+      "verifier"
+    ],
+    "prompt_file": "configs/roles/babi_checker_roles.json",
+    "include_system_prompt": true
+  },
+  "activation_collection": {
+    "split": "calibration",
+    "max_pairs": 96,
+    "output_path": "artifacts/activation_stats/babi_pilot_s005_stats.json",
+    "response_cache_path": "artifacts/cached_responses/babi_pilot_s005.jsonl"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1e-08
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [
+      0.15
+    ],
+    "per_layer_ratio": true,
+    "random_seeds": [
+      1,
+      2,
+      3
+    ]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/babi_persona_stats.json",
+    "output_template": "artifacts/masks/babi_persona_{sparsity}.json",
+    "source": "babi_smollm2_persona_masks_gpu"
+  },
+  "team_eval": {
+    "split": "test",
+    "max_items": 48,
+    "max_new_tokens": 48,
+    "checker_role": "verifier",
+    "bootstrap_samples": 10000,
+    "reference_condition": "shared_random_16",
+    "solver_instruction": "",
+    "checker_instruction": "",
+    "answer_kind": "location",
+    "solver_reply_line": "Answer with exactly one line: FINAL: <word>",
+    "checker_reply_line": "Reply with exactly two lines:\nFINAL: <the correct room name, e.g. kitchen>\nDECISION: <CORRECT or INCORRECT>",
+    "masks_path": "artifacts/masks/babi_pilot_s015_0.15_seeds10.json",
+    "conditions": {
+      "shared_random_16": {
+        "solver_mask": "random_seed_16",
+        "checker_mask": "random_seed_16"
+      },
+      "shared_random_17": {
+        "solver_mask": "random_seed_17",
+        "checker_mask": "random_seed_17"
+      },
+      "shared_random_18": {
+        "solver_mask": "random_seed_18",
+        "checker_mask": "random_seed_18"
+      },
+      "shared_random_19": {
+        "solver_mask": "random_seed_19",
+        "checker_mask": "random_seed_19"
+      },
+      "shared_random_20": {
+        "solver_mask": "random_seed_20",
+        "checker_mask": "random_seed_20"
+      },
+      "shared_random_21": {
+        "solver_mask": "random_seed_21",
+        "checker_mask": "random_seed_21"
+      },
+      "shared_random_22": {
+        "solver_mask": "random_seed_22",
+        "checker_mask": "random_seed_22"
+      }
+    },
+    "output_path": "results/babi_persona_s015_shared10_metrics.json",
+    "predictions_path": "results/babi_persona_s015_shared10_predictions.jsonl",
+    "include_system_prompt": true
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

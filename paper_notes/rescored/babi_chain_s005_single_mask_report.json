@@ -1,0 +1,146 @@
+{
+  "comparisons_to_reference": {
+    "critic_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.083333333333,
+      "ci_low": -0.083333333333,
+      "confidence": 0.95,
+      "difference": 0.0,
+      "left_mean": 0.520833333333,
+      "n_pairs": 48,
+      "right_mean": 0.520833333333
+    },
+    "planner_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.0625,
+      "ci_low": -0.104166666667,
+      "confidence": 0.95,
+      "difference": -0.020833333333,
+      "left_mean": 0.5,
+      "n_pairs": 48,
+      "right_mean": 0.520833333333
+    },
+    "solver_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.0,
+      "ci_low": -0.208333333333,
+      "confidence": 0.95,
+      "difference": -0.104166666667,
+      "left_mean": 0.416666666667,
+      "n_pairs": 48,
+      "right_mean": 0.520833333333
+    },
+    "verifier_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.083333333333,
+      "ci_low": -0.041666666667,
+      "confidence": 0.95,
+      "difference": 0.020833333333,
+      "left_mean": 0.541666666667,
+      "n_pairs": 48,
+      "right_mean": 0.520833333333
+    }
+  },
+  "conditions": {
+    "critic_mask_only": {
+      "critic": "critic",
+      "planner": "unmasked",
+      "solver": "unmasked",
+      "verifier": "unmasked"
+    },
+    "planner_mask_only": {
+      "critic": "unmasked",
+      "planner": "planner",
+      "solver": "unmasked",
+      "verifier": "unmasked"
+    },
+    "solver_mask_only": {
+      "critic": "unmasked",
+      "planner": "unmasked",
+      "solver": "solver",
+      "verifier": "unmasked"
+    },
+    "unmasked": {
+      "critic": "unmasked",
+      "planner": "unmasked",
+      "solver": "unmasked",
+      "verifier": "unmasked"
+    },
+    "verifier_mask_only": {
+      "critic": "unmasked",
+      "planner": "unmasked",
+      "solver": "unmasked",
+      "verifier": "verifier"
+    }
+  },
+  "masks_path": "artifacts/masks/babi_pilot_s005_0.05.json",
+  "max_items": 48,
+  "metrics": {
+    "critic_mask_only": {
+      "checker_decision_accuracy": 0.4375,
+      "correction_rate": 0.125,
+      "final_accuracy": 0.5208333333333334,
+      "net_accuracy_gain": 0.020833333333333332,
+      "preservation_rate": 0.9166666666666666,
+      "solver_accuracy": 0.5,
+      "solver_correct_count": 24,
+      "solver_error_count": 24,
+      "task_count": 48
+    },
+    "planner_mask_only": {
+      "checker_decision_accuracy": 0.4791666666666667,
+      "correction_rate": 0.0,
+      "final_accuracy": 0.5,
+      "net_accuracy_gain": -0.020833333333333332,
+      "preservation_rate": 0.96,
+      "solver_accuracy": 0.5208333333333334,
+      "solver_correct_count": 25,
+      "solver_error_count": 23,
+      "task_count": 48
+    },
+    "solver_mask_only": {
+      "checker_decision_accuracy": 0.5416666666666666,
+      "correction_rate": 0.07407407407407407,
+      "final_accuracy": 0.4166666666666667,
+      "net_accuracy_gain": -0.020833333333333332,
+      "preservation_rate": 0.8571428571428571,
+      "solver_accuracy": 0.4375,
+      "solver_correct_count": 21,
+      "solver_error_count": 27,
+      "task_count": 48
+    },
+    "unmasked": {
+      "checker_decision_accuracy": 0.5208333333333334,
+      "correction_rate": 0.041666666666666664,
+      "final_accuracy": 0.5208333333333334,
+      "net_accuracy_gain": 0.020833333333333332,
+      "preservation_rate": 1.0,
+      "solver_accuracy": 0.5,
+      "solver_correct_count": 24,
+      "solver_error_count": 24,
+      "task_count": 48
+    },
+    "verifier_mask_only": {
+      "checker_decision_accuracy": 0.5416666666666666,
+      "correction_rate": 0.125,
+      "final_accuracy": 0.5416666666666666,
+      "net_accuracy_gain": 0.041666666666666664,
+      "preservation_rate": 0.9583333333333334,
+      "solver_accuracy": 0.5,
+      "solver_correct_count": 24,
+      "solver_error_count": 24,
+      "task_count": 48
+    }
+  },
+  "prediction_count": 240,
+  "reference_condition": "unmasked",
+  "reporting_note": "Functional masks measure team quality, not realized speedup.",
+  "seconds": 1815.8218004999217,
+  "split": "test",
+  "stages": [
+    "planner",
+    "solver",
+    "critic",
+    "verifier"
+  ]
+}

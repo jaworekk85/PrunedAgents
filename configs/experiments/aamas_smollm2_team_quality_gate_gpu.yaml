@@ -1,0 +1,50 @@
+{
+  "seed": 42,
+  "run_name": "aamas_smollm2_team_quality_gate_gpu",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": null,
+    "dtype": "float16",
+    "quantization": "int8",
+    "use_chat_template": true,
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 32
+  },
+  "benchmark": {
+    "name": "controlled_arithmetic",
+    "split_strategy": "template_disjoint",
+    "calibration_size": 24,
+    "dev_size": 8,
+    "test_size": 48
+  },
+  "roles": {
+    "names": ["planner", "solver", "critic", "verifier"],
+    "prompt_file": "configs/roles/controlled_checker_roles.json"
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [0.05],
+    "per_layer_ratio": true,
+    "random_seeds": [1, 2, 3]
+  },
+  "team_eval": {
+    "split": "test",
+    "max_items": 12,
+    "max_new_tokens": 32,
+    "checker_role": "verifier",
+    "bootstrap_samples": 10000,
+    "reference_condition": "unmasked",
+    "conditions": {
+      "unmasked": {
+        "solver_mask": "unmasked",
+        "checker_mask": "unmasked"
+      }
+    },
+    "output_path": "results/aamas_smollm2_team_quality_gate_metrics.json",
+    "predictions_path": "results/aamas_smollm2_team_quality_gate_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

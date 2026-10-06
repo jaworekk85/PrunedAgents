@@ -1,0 +1,40 @@
+{
+  "seed": 42,
+  "run_name": "smoke",
+  "model": {
+    "id": "local/toy-role-model",
+    "revision": null,
+    "dtype": "float32",
+    "device": "cpu",
+    "backend": "toy",
+    "max_new_tokens": 64,
+    "toy_layers": 4,
+    "toy_intermediate_size": 10
+  },
+  "benchmark": {
+    "name": "gsm8k_tiny",
+    "calibration_size": 4,
+    "dev_size": 4,
+    "test_size": 4
+  },
+  "roles": {
+    "names": ["planner", "solver", "critic", "verifier"],
+    "prompt_file": "configs/roles/default_roles.json"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1.0e-8
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [0.4],
+    "per_layer_ratio": true,
+    "random_seeds": [1, 2, 3]
+  },
+  "generation": {
+    "do_sample": false
+  }
+}
+

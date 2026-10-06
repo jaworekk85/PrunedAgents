@@ -1,0 +1,38 @@
+{
+  "seed": 42,
+  "run_name": "aamas_main",
+  "model": {
+    "id": "Qwen/Qwen3-0.6B",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 192
+  },
+  "benchmark": {
+    "name": "gsm8k",
+    "calibration_size": 64,
+    "dev_size": 64,
+    "test_size": 256
+  },
+  "roles": {
+    "names": ["planner", "solver", "critic", "verifier"],
+    "prompt_file": "configs/roles/default_roles.json"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1.0e-8
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [0.0, 0.2, 0.4, 0.6],
+    "per_layer_ratio": true,
+    "random_seeds": [1, 2, 3]
+  },
+  "generation": {
+    "do_sample": false
+  }
+}
+

@@ -1,0 +1,431 @@
+{
+  "bootstrap_samples": 10000,
+  "comparisons_to_random_mean": {
+    "checker_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.381944444444,
+      "ci_low": 0.131944444444,
+      "confidence": 0.95,
+      "difference": 0.256944444444,
+      "left_mean": 0.458333333333,
+      "n_pairs": 48,
+      "right_mean": 0.201388888889
+    },
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.409722222222,
+      "ci_low": 0.152777777778,
+      "confidence": 0.95,
+      "difference": 0.277777777778,
+      "left_mean": 0.479166666667,
+      "n_pairs": 48,
+      "right_mean": 0.201388888889
+    },
+    "role_specific": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.305555555556,
+      "ci_low": 0.048611111111,
+      "confidence": 0.95,
+      "difference": 0.173611111111,
+      "left_mean": 0.375,
+      "n_pairs": 48,
+      "right_mean": 0.201388888889
+    },
+    "solver_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.423611111111,
+      "ci_low": 0.173611111111,
+      "confidence": 0.95,
+      "difference": 0.298611111111,
+      "left_mean": 0.5,
+      "n_pairs": 48,
+      "right_mean": 0.201388888889
+    },
+    "swapped": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.277777777778,
+      "ci_low": 0.034722222222,
+      "confidence": 0.95,
+      "difference": 0.152777777778,
+      "left_mean": 0.354166666667,
+      "n_pairs": 48,
+      "right_mean": 0.201388888889
+    },
+    "unmasked": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.465277777778,
+      "ci_low": 0.222222222222,
+      "confidence": 0.95,
+      "difference": 0.340277777778,
+      "left_mean": 0.541666666667,
+      "n_pairs": 48,
+      "right_mean": 0.201388888889
+    }
+  },
+  "comparisons_to_role_specific": {
+    "checker_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.229166666667,
+      "ci_low": -0.0625,
+      "confidence": 0.95,
+      "difference": 0.083333333333,
+      "left_mean": 0.458333333333,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.270833333333,
+      "ci_low": -0.0625,
+      "confidence": 0.95,
+      "difference": 0.104166666667,
+      "left_mean": 0.479166666667,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "random_seed_1": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.125,
+      "ci_low": -0.416666666667,
+      "confidence": 0.95,
+      "difference": -0.270833333333,
+      "left_mean": 0.104166666667,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "random_seed_2": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.125,
+      "ci_low": -0.208333333333,
+      "confidence": 0.95,
+      "difference": -0.041666666667,
+      "left_mean": 0.333333333333,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "random_seed_3": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.083333333333,
+      "ci_low": -0.333333333333,
+      "confidence": 0.95,
+      "difference": -0.208333333333,
+      "left_mean": 0.166666666667,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "solver_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.25,
+      "ci_low": 0.0,
+      "confidence": 0.95,
+      "difference": 0.125,
+      "left_mean": 0.5,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "swapped": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.145833333333,
+      "ci_low": -0.1875,
+      "confidence": 0.95,
+      "difference": -0.020833333333,
+      "left_mean": 0.354166666667,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "unmasked": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.3125,
+      "ci_low": 0.020833333333,
+      "confidence": 0.95,
+      "difference": 0.166666666667,
+      "left_mean": 0.541666666667,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    }
+  },
+  "comparisons_to_unmasked": {
+    "checker_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.020833333333,
+      "ci_low": -0.166666666667,
+      "confidence": 0.95,
+      "difference": -0.083333333333,
+      "left_mean": 0.458333333333,
+      "n_pairs": 48,
+      "right_mean": 0.541666666667
+    },
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.083333333333,
+      "ci_low": -0.208333333333,
+      "confidence": 0.95,
+      "difference": -0.0625,
+      "left_mean": 0.479166666667,
+      "n_pairs": 48,
+      "right_mean": 0.541666666667
+    },
+    "random_seed_1": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.291666666667,
+      "ci_low": -0.583333333333,
+      "confidence": 0.95,
+      "difference": -0.4375,
+      "left_mean": 0.104166666667,
+      "n_pairs": 48,
+      "right_mean": 0.541666666667
+    },
+    "random_seed_2": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.0625,
+      "ci_low": -0.354166666667,
+      "confidence": 0.95,
+      "difference": -0.208333333333,
+      "left_mean": 0.333333333333,
+      "n_pairs": 48,
+      "right_mean": 0.541666666667
+    },
+    "random_seed_3": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.25,
+      "ci_low": -0.520833333333,
+      "confidence": 0.95,
+      "difference": -0.375,
+      "left_mean": 0.166666666667,
+      "n_pairs": 48,
+      "right_mean": 0.541666666667
+    },
+    "role_specific": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.020833333333,
+      "ci_low": -0.3125,
+      "confidence": 0.95,
+      "difference": -0.166666666667,
+      "left_mean": 0.375,
+      "n_pairs": 48,
+      "right_mean": 0.541666666667
+    },
+    "solver_mask_only": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.0625,
+      "ci_low": -0.145833333333,
+      "confidence": 0.95,
+      "difference": -0.041666666667,
+      "left_mean": 0.5,
+      "n_pairs": 48,
+      "right_mean": 0.541666666667
+    },
+    "swapped": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.083333333333,
+      "ci_low": -0.3125,
+      "confidence": 0.95,
+      "difference": -0.1875,
+      "left_mean": 0.354166666667,
+      "n_pairs": 48,
+      "right_mean": 0.541666666667
+    }
+  },
+  "conditions": {
+    "checker_mask_only": {
+      "checker_decision_accuracy": 0.2708333333333333,
+      "correction_rate": 0.0,
+      "final_accuracy": 0.4583333333333333,
+      "final_accuracy_ci": {
+        "high": 0.6041666666666666,
+        "low": 0.3125
+      },
+      "net_accuracy_gain": -0.08333333333333333,
+      "preservation_rate": 0.8461538461538461,
+      "solver_accuracy": 0.5416666666666666,
+      "solver_accuracy_ci": {
+        "high": 0.6875,
+        "low": 0.3958333333333333
+      },
+      "solver_correct_count": 26,
+      "solver_error_count": 22,
+      "task_count": 48
+    },
+    "generic": {
+      "checker_decision_accuracy": 0.4791666666666667,
+      "correction_rate": 0.045454545454545456,
+      "final_accuracy": 0.4791666666666667,
+      "final_accuracy_ci": {
+        "high": 0.625,
+        "low": 0.3333333333333333
+      },
+      "net_accuracy_gain": -0.0625,
+      "preservation_rate": 0.8461538461538461,
+      "solver_accuracy": 0.5416666666666666,
+      "solver_accuracy_ci": {
+        "high": 0.6875,
+        "low": 0.3958333333333333
+      },
+      "solver_correct_count": 26,
+      "solver_error_count": 22,
+      "task_count": 48
+    },
+    "random_seed_1": {
+      "checker_decision_accuracy": 0.0,
+      "correction_rate": 0.11363636363636363,
+      "final_accuracy": 0.10416666666666667,
+      "final_accuracy_ci": {
+        "high": 0.1875,
+        "low": 0.020833333333333332
+      },
+      "net_accuracy_gain": 0.020833333333333332,
+      "preservation_rate": 0.0,
+      "solver_accuracy": 0.08333333333333333,
+      "solver_accuracy_ci": {
+        "high": 0.16666666666666666,
+        "low": 0.020833333333333332
+      },
+      "solver_correct_count": 4,
+      "solver_error_count": 44,
+      "task_count": 48
+    },
+    "random_seed_2": {
+      "checker_decision_accuracy": 0.3958333333333333,
+      "correction_rate": 0.08,
+      "final_accuracy": 0.3333333333333333,
+      "final_accuracy_ci": {
+        "high": 0.4791666666666667,
+        "low": 0.20833333333333334
+      },
+      "net_accuracy_gain": -0.14583333333333334,
+      "preservation_rate": 0.6086956521739131,
+      "solver_accuracy": 0.4791666666666667,
+      "solver_accuracy_ci": {
+        "high": 0.625,
+        "low": 0.3333333333333333
+      },
+      "solver_correct_count": 23,
+      "solver_error_count": 25,
+      "task_count": 48
+    },
+    "random_seed_3": {
+      "checker_decision_accuracy": 0.10416666666666667,
+      "correction_rate": 0.041666666666666664,
+      "final_accuracy": 0.16666666666666666,
+      "final_accuracy_ci": {
+        "high": 0.2708333333333333,
+        "low": 0.0625
+      },
+      "net_accuracy_gain": -0.3333333333333333,
+      "preservation_rate": 0.2916666666666667,
+      "solver_accuracy": 0.5,
+      "solver_accuracy_ci": {
+        "high": 0.6458333333333334,
+        "low": 0.3541666666666667
+      },
+      "solver_correct_count": 24,
+      "solver_error_count": 24,
+      "task_count": 48
+    },
+    "role_specific": {
+      "checker_decision_accuracy": 0.14583333333333334,
+      "correction_rate": 0.05555555555555555,
+      "final_accuracy": 0.375,
+      "final_accuracy_ci": {
+        "high": 0.5208333333333334,
+        "low": 0.25
+      },
+      "net_accuracy_gain": -0.25,
+      "preservation_rate": 0.5666666666666667,
+      "solver_accuracy": 0.625,
+      "solver_accuracy_ci": {
+        "high": 0.75,
+        "low": 0.4791666666666667
+      },
+      "solver_correct_count": 30,
+      "solver_error_count": 18,
+      "task_count": 48
+    },
+    "solver_mask_only": {
+      "checker_decision_accuracy": 0.375,
+      "correction_rate": 0.0,
+      "final_accuracy": 0.5,
+      "final_accuracy_ci": {
+        "high": 0.6458333333333334,
+        "low": 0.3541666666666667
+      },
+      "net_accuracy_gain": -0.125,
+      "preservation_rate": 0.8,
+      "solver_accuracy": 0.625,
+      "solver_accuracy_ci": {
+        "high": 0.75,
+        "low": 0.4791666666666667
+      },
+      "solver_correct_count": 30,
+      "solver_error_count": 18,
+      "task_count": 48
+    },
+    "swapped": {
+      "checker_decision_accuracy": 0.4791666666666667,
+      "correction_rate": 0.07407407407407407,
+      "final_accuracy": 0.3541666666666667,
+      "final_accuracy_ci": {
+        "high": 0.4791666666666667,
+        "low": 0.22916666666666666
+      },
+      "net_accuracy_gain": -0.08333333333333333,
+      "preservation_rate": 0.7142857142857143,
+      "solver_accuracy": 0.4375,
+      "solver_accuracy_ci": {
+        "high": 0.5833333333333334,
+        "low": 0.2916666666666667
+      },
+      "solver_correct_count": 21,
+      "solver_error_count": 27,
+      "task_count": 48
+    },
+    "unmasked": {
+      "checker_decision_accuracy": 0.4166666666666667,
+      "correction_rate": 0.045454545454545456,
+      "final_accuracy": 0.5416666666666666,
+      "final_accuracy_ci": {
+        "high": 0.6875,
+        "low": 0.3958333333333333
+      },
+      "net_accuracy_gain": 0.0,
+      "preservation_rate": 0.9615384615384616,
+      "solver_accuracy": 0.5416666666666666,
+      "solver_accuracy_ci": {
+        "high": 0.6875,
+        "low": 0.3958333333333333
+      },
+      "solver_correct_count": 26,
+      "solver_error_count": 22,
+      "task_count": 48
+    }
+  },
+  "metrics_paths": [
+    "results/babi_pilot_s005_full_metrics.json"
+  ],
+  "predictions_paths": [
+    "results/babi_pilot_s005_full_predictions.jsonl"
+  ],
+  "random_mean": {
+    "checker_decision_accuracy": 0.16666666666666666,
+    "correction_rate": 0.08602150537634409,
+    "final_accuracy": 0.20138888888888887,
+    "final_accuracy_ci": {
+      "high": 0.2916666666666667,
+      "low": 0.11805555555555554
+    },
+    "net_accuracy_gain": -0.15277777777777787,
+    "preservation_rate": 0.4117647058823529,
+    "random_conditions": [
+      "random_seed_1",
+      "random_seed_2",
+      "random_seed_3"
+    ],
+    "solver_accuracy": 0.35416666666666674,
+    "solver_accuracy_ci": {
+      "high": 0.44444444444444436,
+      "low": 0.263888888888889
+    },
+    "task_count": 48
+  },
+  "seed": 42
+}

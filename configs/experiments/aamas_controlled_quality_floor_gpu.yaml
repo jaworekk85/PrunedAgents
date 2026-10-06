@@ -1,0 +1,50 @@
+{
+  "seed": 42,
+  "run_name": "aamas_controlled_quality_floor_gpu",
+  "model": {
+    "id": "Qwen/Qwen3-0.6B",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 24
+  },
+  "benchmark": {
+    "name": "controlled_arithmetic",
+    "calibration_size": 8,
+    "dev_size": 4,
+    "test_size": 16
+  },
+  "roles": {
+    "names": ["planner", "solver", "critic", "verifier"],
+    "prompt_file": "configs/roles/controlled_arithmetic_roles.json"
+  },
+  "candidate_policy": {
+    "default_mode": "gold",
+    "wrong_offset": 1,
+    "mode_by_role": {
+      "planner": "unused",
+      "solver": "no_answer_plan",
+      "critic": "wrong_plus_one",
+      "verifier": "wrong_plus_one"
+    }
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [0.1],
+    "per_layer_ratio": true,
+    "random_seeds": [1]
+  },
+  "functional_eval": {
+    "split": "test",
+    "max_items": 16,
+    "max_new_tokens": 24,
+    "primary_roles": ["solver", "critic", "verifier"],
+    "mask_names": ["unmasked"],
+    "output_path": "results/aamas_controlled_quality_floor_metrics.json",
+    "predictions_path": "results/aamas_controlled_quality_floor_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

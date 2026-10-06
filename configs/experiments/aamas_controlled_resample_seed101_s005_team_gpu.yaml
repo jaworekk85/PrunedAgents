@@ -1,0 +1,87 @@
+{
+  "seed": 42,
+  "run_name": "aamas_controlled_resample_seed101_s005_team_gpu",
+  "model": {
+    "id": "Qwen/Qwen3-0.6B",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 32
+  },
+  "benchmark": {
+    "name": "controlled_arithmetic",
+    "split_strategy": "template_disjoint",
+    "calibration_size": 24,
+    "dev_size": 8,
+    "test_size": 48
+  },
+  "roles": {
+    "names": [
+      "planner",
+      "solver",
+      "critic",
+      "verifier"
+    ],
+    "prompt_file": "configs/roles/controlled_checker_roles.json"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1e-08
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [
+      0.05
+    ],
+    "per_layer_ratio": true,
+    "random_seeds": [
+      1,
+      2,
+      3
+    ]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/aamas_controlled_resample_seed101_stats.json",
+    "output_template": "artifacts/masks/aamas_controlled_resample_seed101_s005_{sparsity}.json",
+    "source": "aamas_controlled_resample_seed101_s005_gpu"
+  },
+  "team_eval": {
+    "split": "test",
+    "max_items": 48,
+    "max_new_tokens": 32,
+    "checker_role": "verifier",
+    "bootstrap_samples": 10000,
+    "reference_condition": "unmasked",
+    "masks_path": "artifacts/masks/aamas_controlled_resample_seed101_s005_0.05.json",
+    "conditions": {
+      "unmasked": {
+        "solver_mask": "unmasked",
+        "checker_mask": "unmasked"
+      },
+      "role_specific": {
+        "solver_mask": "solver",
+        "checker_mask": "verifier"
+      },
+      "random_seed_1": {
+        "solver_mask": "random_seed_1",
+        "checker_mask": "random_seed_1"
+      },
+      "random_seed_2": {
+        "solver_mask": "random_seed_2",
+        "checker_mask": "random_seed_2"
+      },
+      "random_seed_3": {
+        "solver_mask": "random_seed_3",
+        "checker_mask": "random_seed_3"
+      }
+    },
+    "output_path": "results/aamas_controlled_resample_seed101_s005_team_metrics.json",
+    "predictions_path": "results/aamas_controlled_resample_seed101_s005_team_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

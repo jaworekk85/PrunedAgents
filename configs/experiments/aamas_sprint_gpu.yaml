@@ -1,0 +1,81 @@
+{
+  "seed": 42,
+  "run_name": "aamas_sprint_gpu",
+  "model": {
+    "id": "Qwen/Qwen3-0.6B",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 32
+  },
+  "benchmark": {
+    "name": "gsm8k",
+    "dataset_id": "openai/gsm8k",
+    "dataset_config": "main",
+    "calibration_size": 8,
+    "dev_size": 8,
+    "test_size": 16
+  },
+  "roles": {
+    "names": ["planner", "solver", "critic", "verifier"],
+    "prompt_file": "configs/roles/default_roles.json"
+  },
+  "candidate_policy": {
+    "default_mode": "gold",
+    "wrong_offset": 1,
+    "mode_by_role": {
+      "planner": "unused",
+      "solver": "no_answer_plan",
+      "critic": "wrong_plus_one",
+      "verifier": "wrong_plus_one"
+    }
+  },
+  "activation_collection": {
+    "split": "calibration",
+    "max_pairs": 32,
+    "output_path": "artifacts/activation_stats/aamas_sprint_stats.json",
+    "response_cache_path": "artifacts/cached_responses/aamas_sprint.jsonl"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1.0e-8
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [0.4],
+    "per_layer_ratio": true,
+    "random_seeds": [1, 2, 3]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/aamas_sprint_stats.json",
+    "output_template": "artifacts/masks/aamas_sprint_sparsity_{sparsity}.json",
+    "source": "aamas_sprint_gpu"
+  },
+  "functional_eval": {
+    "split": "test",
+    "max_items": 8,
+    "max_new_tokens": 32,
+    "primary_roles": ["solver", "critic", "verifier"],
+    "masks_path": "artifacts/masks/aamas_sprint_sparsity_0.4.json",
+    "mask_names": [
+      "unmasked",
+      "planner",
+      "solver",
+      "critic",
+      "verifier",
+      "generic",
+      "magnitude",
+      "random_seed_1",
+      "random_seed_2",
+      "random_seed_3"
+    ],
+    "output_path": "results/aamas_sprint_masked_cross_role_metrics.json",
+    "predictions_path": "results/aamas_sprint_masked_cross_role_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "Qwen/Qwen3-0.6B",
+  "revision": null,
+  "dtype": "auto",
+  "device": "auto",
+  "backend": "hf",
+  "max_new_tokens": 192,
+  "thinking_mode": "fixed_by_prompt"
+}
+

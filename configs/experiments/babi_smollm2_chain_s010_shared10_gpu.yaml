@@ -1,0 +1,117 @@
+{
+  "seed": 42,
+  "run_name": "babi_smollm2_chain_s010_shared10_gpu",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 48,
+    "quantization": "int8",
+    "use_chat_template": true
+  },
+  "benchmark": {
+    "name": "babi",
+    "task": 1,
+    "calibration_size": 24,
+    "dev_size": 8,
+    "test_size": 48
+  },
+  "roles": {
+    "names": [
+      "planner",
+      "solver",
+      "critic",
+      "verifier"
+    ],
+    "prompt_file": "configs/roles/babi_checker_roles.json"
+  },
+  "team_chain": {
+    "split": "test",
+    "max_items": 48,
+    "max_new_tokens": 48,
+    "bootstrap_samples": 10000,
+    "reference_condition": "shared_random_16",
+    "answer_kind": "location",
+    "masks_path": "artifacts/masks/babi_pilot_s010_0.1_seeds10.json",
+    "stages": [
+      "planner",
+      "solver",
+      "critic",
+      "verifier"
+    ],
+    "stage_config": {
+      "planner": {
+        "scored": false,
+        "instruction": "Identify relevant facts.",
+        "reply_line": "Reply with one short line naming the relevant facts. Do not give the final location."
+      },
+      "solver": {
+        "scored": true,
+        "context_label": "Plan",
+        "context_intro": "",
+        "reply_line": "Answer with exactly one line: FINAL: <word>"
+      },
+      "critic": {
+        "scored": true,
+        "context_label": "Candidate solution",
+        "reply_line": "Reply with exactly two lines:\nFINAL: <the correct room name, e.g. kitchen>\nDECISION: <CORRECT or INCORRECT>"
+      },
+      "verifier": {
+        "scored": true,
+        "context_label": "Candidate solution",
+        "reply_line": "Reply with exactly two lines:\nFINAL: <the correct room name, e.g. kitchen>\nDECISION: <CORRECT or INCORRECT>"
+      }
+    },
+    "conditions": {
+      "shared_random_16": {
+        "planner": "random_seed_16",
+        "solver": "random_seed_16",
+        "critic": "random_seed_16",
+        "verifier": "random_seed_16"
+      },
+      "shared_random_17": {
+        "planner": "random_seed_17",
+        "solver": "random_seed_17",
+        "critic": "random_seed_17",
+        "verifier": "random_seed_17"
+      },
+      "shared_random_18": {
+        "planner": "random_seed_18",
+        "solver": "random_seed_18",
+        "critic": "random_seed_18",
+        "verifier": "random_seed_18"
+      },
+      "shared_random_19": {
+        "planner": "random_seed_19",
+        "solver": "random_seed_19",
+        "critic": "random_seed_19",
+        "verifier": "random_seed_19"
+      },
+      "shared_random_20": {
+        "planner": "random_seed_20",
+        "solver": "random_seed_20",
+        "critic": "random_seed_20",
+        "verifier": "random_seed_20"
+      },
+      "shared_random_21": {
+        "planner": "random_seed_21",
+        "solver": "random_seed_21",
+        "critic": "random_seed_21",
+        "verifier": "random_seed_21"
+      },
+      "shared_random_22": {
+        "planner": "random_seed_22",
+        "solver": "random_seed_22",
+        "critic": "random_seed_22",
+        "verifier": "random_seed_22"
+      }
+    },
+    "output_path": "results/babi_chain_s010_shared10_metrics.json",
+    "predictions_path": "results/babi_chain_s010_shared10_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

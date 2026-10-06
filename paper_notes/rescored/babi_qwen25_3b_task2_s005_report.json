@@ -1,0 +1,284 @@
+{
+  "bootstrap_samples": 10000,
+  "comparisons_to_random_mean": {
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": -0.027777777778,
+      "ci_low": -0.180555555556,
+      "confidence": 0.95,
+      "difference": -0.104166666667,
+      "left_mean": 0.291666666667,
+      "n_pairs": 48,
+      "right_mean": 0.395833333333
+    },
+    "role_specific": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.055555555556,
+      "ci_low": -0.138888888889,
+      "confidence": 0.95,
+      "difference": -0.041666666667,
+      "left_mean": 0.354166666667,
+      "n_pairs": 48,
+      "right_mean": 0.395833333333
+    },
+    "unmasked": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.069444444444,
+      "ci_low": -0.111111111111,
+      "confidence": 0.95,
+      "difference": -0.020833333333,
+      "left_mean": 0.375,
+      "n_pairs": 48,
+      "right_mean": 0.395833333333
+    }
+  },
+  "comparisons_to_role_specific": {
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.041666666667,
+      "ci_low": -0.166666666667,
+      "confidence": 0.95,
+      "difference": -0.0625,
+      "left_mean": 0.291666666667,
+      "n_pairs": 48,
+      "right_mean": 0.354166666667
+    },
+    "random_seed_1": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.083333333333,
+      "ci_low": -0.166666666667,
+      "confidence": 0.95,
+      "difference": -0.041666666667,
+      "left_mean": 0.3125,
+      "n_pairs": 48,
+      "right_mean": 0.354166666667
+    },
+    "random_seed_2": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.229166666667,
+      "ci_low": -0.020833333333,
+      "confidence": 0.95,
+      "difference": 0.104166666667,
+      "left_mean": 0.458333333333,
+      "n_pairs": 48,
+      "right_mean": 0.354166666667
+    },
+    "random_seed_3": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.188020833333,
+      "ci_low": -0.0625,
+      "confidence": 0.95,
+      "difference": 0.0625,
+      "left_mean": 0.416666666667,
+      "n_pairs": 48,
+      "right_mean": 0.354166666667
+    },
+    "unmasked": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.125,
+      "ci_low": -0.083333333333,
+      "confidence": 0.95,
+      "difference": 0.020833333333,
+      "left_mean": 0.375,
+      "n_pairs": 48,
+      "right_mean": 0.354166666667
+    }
+  },
+  "comparisons_to_unmasked": {
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.020833333333,
+      "ci_low": -0.1875,
+      "confidence": 0.95,
+      "difference": -0.083333333333,
+      "left_mean": 0.291666666667,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "random_seed_1": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.0625,
+      "ci_low": -0.1875,
+      "confidence": 0.95,
+      "difference": -0.0625,
+      "left_mean": 0.3125,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "random_seed_2": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.208333333333,
+      "ci_low": -0.020833333333,
+      "confidence": 0.95,
+      "difference": 0.083333333333,
+      "left_mean": 0.458333333333,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "random_seed_3": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.145833333333,
+      "ci_low": -0.083333333333,
+      "confidence": 0.95,
+      "difference": 0.041666666667,
+      "left_mean": 0.416666666667,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    },
+    "role_specific": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.083333333333,
+      "ci_low": -0.125,
+      "confidence": 0.95,
+      "difference": -0.020833333333,
+      "left_mean": 0.354166666667,
+      "n_pairs": 48,
+      "right_mean": 0.375
+    }
+  },
+  "conditions": {
+    "generic": {
+      "checker_decision_accuracy": 0.4375,
+      "correction_rate": 0.10526315789473684,
+      "final_accuracy": 0.2916666666666667,
+      "final_accuracy_ci": {
+        "high": 0.4166666666666667,
+        "low": 0.16666666666666666
+      },
+      "net_accuracy_gain": 0.08333333333333333,
+      "preservation_rate": 1.0,
+      "solver_accuracy": 0.20833333333333334,
+      "solver_accuracy_ci": {
+        "high": 0.3333333333333333,
+        "low": 0.10416666666666667
+      },
+      "solver_correct_count": 10,
+      "solver_error_count": 38,
+      "task_count": 48
+    },
+    "random_seed_1": {
+      "checker_decision_accuracy": 0.3541666666666667,
+      "correction_rate": 0.05714285714285714,
+      "final_accuracy": 0.3125,
+      "final_accuracy_ci": {
+        "high": 0.4375,
+        "low": 0.1875
+      },
+      "net_accuracy_gain": 0.041666666666666664,
+      "preservation_rate": 1.0,
+      "solver_accuracy": 0.2708333333333333,
+      "solver_accuracy_ci": {
+        "high": 0.3958333333333333,
+        "low": 0.14583333333333334
+      },
+      "solver_correct_count": 13,
+      "solver_error_count": 35,
+      "task_count": 48
+    },
+    "random_seed_2": {
+      "checker_decision_accuracy": 0.4166666666666667,
+      "correction_rate": 0.2972972972972973,
+      "final_accuracy": 0.4583333333333333,
+      "final_accuracy_ci": {
+        "high": 0.6041666666666666,
+        "low": 0.3125
+      },
+      "net_accuracy_gain": 0.22916666666666666,
+      "preservation_rate": 1.0,
+      "solver_accuracy": 0.22916666666666666,
+      "solver_accuracy_ci": {
+        "high": 0.3541666666666667,
+        "low": 0.125
+      },
+      "solver_correct_count": 11,
+      "solver_error_count": 37,
+      "task_count": 48
+    },
+    "random_seed_3": {
+      "checker_decision_accuracy": 0.3541666666666667,
+      "correction_rate": 0.12903225806451613,
+      "final_accuracy": 0.4166666666666667,
+      "final_accuracy_ci": {
+        "high": 0.5625,
+        "low": 0.2916666666666667
+      },
+      "net_accuracy_gain": 0.0625,
+      "preservation_rate": 0.9411764705882353,
+      "solver_accuracy": 0.3541666666666667,
+      "solver_accuracy_ci": {
+        "high": 0.5,
+        "low": 0.22916666666666666
+      },
+      "solver_correct_count": 17,
+      "solver_error_count": 31,
+      "task_count": 48
+    },
+    "role_specific": {
+      "checker_decision_accuracy": 0.4791666666666667,
+      "correction_rate": 0.11764705882352941,
+      "final_accuracy": 0.3541666666666667,
+      "final_accuracy_ci": {
+        "high": 0.5,
+        "low": 0.22916666666666666
+      },
+      "net_accuracy_gain": 0.0625,
+      "preservation_rate": 0.9285714285714286,
+      "solver_accuracy": 0.2916666666666667,
+      "solver_accuracy_ci": {
+        "high": 0.4166666666666667,
+        "low": 0.16666666666666666
+      },
+      "solver_correct_count": 14,
+      "solver_error_count": 34,
+      "task_count": 48
+    },
+    "unmasked": {
+      "checker_decision_accuracy": 0.375,
+      "correction_rate": 0.14705882352941177,
+      "final_accuracy": 0.375,
+      "final_accuracy_ci": {
+        "high": 0.5208333333333334,
+        "low": 0.25
+      },
+      "net_accuracy_gain": 0.08333333333333333,
+      "preservation_rate": 0.9285714285714286,
+      "solver_accuracy": 0.2916666666666667,
+      "solver_accuracy_ci": {
+        "high": 0.4166666666666667,
+        "low": 0.16666666666666666
+      },
+      "solver_correct_count": 14,
+      "solver_error_count": 34,
+      "task_count": 48
+    }
+  },
+  "metrics_paths": [
+    "results/babi_qwen25_3b_task2_s005_metrics.json"
+  ],
+  "predictions_paths": [
+    "results/babi_qwen25_3b_task2_s005_predictions.jsonl"
+  ],
+  "random_mean": {
+    "checker_decision_accuracy": 0.375,
+    "correction_rate": 0.1650485436893204,
+    "final_accuracy": 0.3958333333333334,
+    "final_accuracy_ci": {
+      "high": 0.5069444444444445,
+      "low": 0.2916666666666666
+    },
+    "net_accuracy_gain": 0.11111111111111116,
+    "preservation_rate": 0.975609756097561,
+    "random_conditions": [
+      "random_seed_1",
+      "random_seed_2",
+      "random_seed_3"
+    ],
+    "solver_accuracy": 0.28472222222222227,
+    "solver_accuracy_ci": {
+      "high": 0.38888888888888884,
+      "low": 0.1875
+    },
+    "task_count": 48
+  },
+  "seed": 42
+}

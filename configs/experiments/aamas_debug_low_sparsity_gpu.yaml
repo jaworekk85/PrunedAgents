@@ -1,0 +1,78 @@
+{
+  "seed": 42,
+  "run_name": "aamas_debug_low_sparsity_gpu",
+  "model": {
+    "id": "Qwen/Qwen3-0.6B",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 32
+  },
+  "benchmark": {
+    "name": "gsm8k",
+    "dataset_id": "openai/gsm8k",
+    "dataset_config": "main",
+    "calibration_size": 4,
+    "dev_size": 4,
+    "test_size": 8
+  },
+  "roles": {
+    "names": ["planner", "solver", "critic", "verifier"],
+    "prompt_file": "configs/roles/default_roles.json"
+  },
+  "candidate_policy": {
+    "default_mode": "gold",
+    "wrong_offset": 1,
+    "mode_by_role": {
+      "planner": "unused",
+      "solver": "no_answer_plan",
+      "critic": "wrong_plus_one",
+      "verifier": "wrong_plus_one"
+    }
+  },
+  "activation_collection": {
+    "split": "calibration",
+    "max_pairs": 16,
+    "output_path": "artifacts/activation_stats/aamas_debug_low_sparsity_stats.json",
+    "response_cache_path": "artifacts/cached_responses/aamas_debug_low_sparsity.jsonl"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1.0e-8
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [0.1],
+    "per_layer_ratio": true,
+    "random_seeds": [1]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/aamas_debug_low_sparsity_stats.json",
+    "output_template": "artifacts/masks/aamas_debug_low_sparsity_{sparsity}.json",
+    "source": "aamas_debug_low_sparsity_gpu"
+  },
+  "functional_eval": {
+    "split": "test",
+    "max_items": 4,
+    "max_new_tokens": 32,
+    "primary_roles": ["solver", "critic", "verifier"],
+    "masks_path": "artifacts/masks/aamas_debug_low_sparsity_0.1.json",
+    "mask_names": [
+      "unmasked",
+      "planner",
+      "solver",
+      "critic",
+      "verifier",
+      "generic",
+      "random_seed_1"
+    ],
+    "output_path": "results/aamas_debug_low_sparsity_masked_cross_role_metrics.json",
+    "predictions_path": "results/aamas_debug_low_sparsity_masked_cross_role_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}

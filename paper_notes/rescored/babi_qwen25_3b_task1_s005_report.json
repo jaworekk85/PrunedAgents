@@ -1,0 +1,284 @@
+{
+  "bootstrap_samples": 10000,
+  "comparisons_to_random_mean": {
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.083333333333,
+      "ci_low": -0.125,
+      "confidence": 0.95,
+      "difference": -0.020833333333,
+      "left_mean": 0.5625,
+      "n_pairs": 48,
+      "right_mean": 0.583333333333
+    },
+    "role_specific": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.111111111111,
+      "ci_low": -0.118055555556,
+      "confidence": 0.95,
+      "difference": 0.0,
+      "left_mean": 0.583333333333,
+      "n_pairs": 48,
+      "right_mean": 0.583333333333
+    },
+    "unmasked": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.125,
+      "ci_low": -0.083333333333,
+      "confidence": 0.95,
+      "difference": 0.020833333333,
+      "left_mean": 0.604166666667,
+      "n_pairs": 48,
+      "right_mean": 0.583333333333
+    }
+  },
+  "comparisons_to_role_specific": {
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.0625,
+      "ci_low": -0.104166666667,
+      "confidence": 0.95,
+      "difference": -0.020833333333,
+      "left_mean": 0.5625,
+      "n_pairs": 48,
+      "right_mean": 0.583333333333
+    },
+    "random_seed_1": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.125,
+      "ci_low": -0.1875,
+      "confidence": 0.95,
+      "difference": -0.020833333333,
+      "left_mean": 0.5625,
+      "n_pairs": 48,
+      "right_mean": 0.583333333333
+    },
+    "random_seed_2": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.145833333333,
+      "ci_low": -0.145833333333,
+      "confidence": 0.95,
+      "difference": 0.0,
+      "left_mean": 0.583333333333,
+      "n_pairs": 48,
+      "right_mean": 0.583333333333
+    },
+    "random_seed_3": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.145833333333,
+      "ci_low": -0.104166666667,
+      "confidence": 0.95,
+      "difference": 0.020833333333,
+      "left_mean": 0.604166666667,
+      "n_pairs": 48,
+      "right_mean": 0.583333333333
+    },
+    "unmasked": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.145833333333,
+      "ci_low": -0.104166666667,
+      "confidence": 0.95,
+      "difference": 0.020833333333,
+      "left_mean": 0.604166666667,
+      "n_pairs": 48,
+      "right_mean": 0.583333333333
+    }
+  },
+  "comparisons_to_unmasked": {
+    "generic": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.041666666667,
+      "ci_low": -0.125,
+      "confidence": 0.95,
+      "difference": -0.041666666667,
+      "left_mean": 0.5625,
+      "n_pairs": 48,
+      "right_mean": 0.604166666667
+    },
+    "random_seed_1": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.104166666667,
+      "ci_low": -0.1875,
+      "confidence": 0.95,
+      "difference": -0.041666666667,
+      "left_mean": 0.5625,
+      "n_pairs": 48,
+      "right_mean": 0.604166666667
+    },
+    "random_seed_2": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.125,
+      "ci_low": -0.145833333333,
+      "confidence": 0.95,
+      "difference": -0.020833333333,
+      "left_mean": 0.583333333333,
+      "n_pairs": 48,
+      "right_mean": 0.604166666667
+    },
+    "random_seed_3": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.145833333333,
+      "ci_low": -0.145833333333,
+      "confidence": 0.95,
+      "difference": 0.0,
+      "left_mean": 0.604166666667,
+      "n_pairs": 48,
+      "right_mean": 0.604166666667
+    },
+    "role_specific": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.104166666667,
+      "ci_low": -0.145833333333,
+      "confidence": 0.95,
+      "difference": -0.020833333333,
+      "left_mean": 0.583333333333,
+      "n_pairs": 48,
+      "right_mean": 0.604166666667
+    }
+  },
+  "conditions": {
+    "generic": {
+      "checker_decision_accuracy": 0.5625,
+      "correction_rate": 0.08695652173913043,
+      "final_accuracy": 0.5625,
+      "final_accuracy_ci": {
+        "high": 0.7083333333333334,
+        "low": 0.4166666666666667
+      },
+      "net_accuracy_gain": 0.041666666666666664,
+      "preservation_rate": 1.0,
+      "solver_accuracy": 0.5208333333333334,
+      "solver_accuracy_ci": {
+        "high": 0.6666666666666666,
+        "low": 0.375
+      },
+      "solver_correct_count": 25,
+      "solver_error_count": 23,
+      "task_count": 48
+    },
+    "random_seed_1": {
+      "checker_decision_accuracy": 0.5416666666666666,
+      "correction_rate": 0.23809523809523808,
+      "final_accuracy": 0.5625,
+      "final_accuracy_ci": {
+        "high": 0.7083333333333334,
+        "low": 0.4166666666666667
+      },
+      "net_accuracy_gain": 0.0,
+      "preservation_rate": 0.8148148148148148,
+      "solver_accuracy": 0.5625,
+      "solver_accuracy_ci": {
+        "high": 0.7083333333333334,
+        "low": 0.4166666666666667
+      },
+      "solver_correct_count": 27,
+      "solver_error_count": 21,
+      "task_count": 48
+    },
+    "random_seed_2": {
+      "checker_decision_accuracy": 0.625,
+      "correction_rate": 0.05555555555555555,
+      "final_accuracy": 0.5833333333333334,
+      "final_accuracy_ci": {
+        "high": 0.7291666666666666,
+        "low": 0.4375
+      },
+      "net_accuracy_gain": -0.041666666666666664,
+      "preservation_rate": 0.9,
+      "solver_accuracy": 0.625,
+      "solver_accuracy_ci": {
+        "high": 0.75,
+        "low": 0.4791666666666667
+      },
+      "solver_correct_count": 30,
+      "solver_error_count": 18,
+      "task_count": 48
+    },
+    "random_seed_3": {
+      "checker_decision_accuracy": 0.6041666666666666,
+      "correction_rate": 0.1,
+      "final_accuracy": 0.6041666666666666,
+      "final_accuracy_ci": {
+        "high": 0.7291666666666666,
+        "low": 0.4583333333333333
+      },
+      "net_accuracy_gain": 0.020833333333333332,
+      "preservation_rate": 0.9642857142857143,
+      "solver_accuracy": 0.5833333333333334,
+      "solver_accuracy_ci": {
+        "high": 0.7291666666666666,
+        "low": 0.4375
+      },
+      "solver_correct_count": 28,
+      "solver_error_count": 20,
+      "task_count": 48
+    },
+    "role_specific": {
+      "checker_decision_accuracy": 0.5833333333333334,
+      "correction_rate": 0.10526315789473684,
+      "final_accuracy": 0.5833333333333334,
+      "final_accuracy_ci": {
+        "high": 0.7291666666666666,
+        "low": 0.4375
+      },
+      "net_accuracy_gain": -0.020833333333333332,
+      "preservation_rate": 0.896551724137931,
+      "solver_accuracy": 0.6041666666666666,
+      "solver_accuracy_ci": {
+        "high": 0.75,
+        "low": 0.4583333333333333
+      },
+      "solver_correct_count": 29,
+      "solver_error_count": 19,
+      "task_count": 48
+    },
+    "unmasked": {
+      "checker_decision_accuracy": 0.5833333333333334,
+      "correction_rate": 0.15,
+      "final_accuracy": 0.6041666666666666,
+      "final_accuracy_ci": {
+        "high": 0.7291666666666666,
+        "low": 0.4583333333333333
+      },
+      "net_accuracy_gain": 0.020833333333333332,
+      "preservation_rate": 0.9285714285714286,
+      "solver_accuracy": 0.5833333333333334,
+      "solver_accuracy_ci": {
+        "high": 0.7291666666666666,
+        "low": 0.4375
+      },
+      "solver_correct_count": 28,
+      "solver_error_count": 20,
+      "task_count": 48
+    }
+  },
+  "metrics_paths": [
+    "results/babi_qwen25_3b_task1_s005_metrics.json"
+  ],
+  "predictions_paths": [
+    "results/babi_qwen25_3b_task1_s005_predictions.jsonl"
+  ],
+  "random_mean": {
+    "checker_decision_accuracy": 0.5902777777777778,
+    "correction_rate": 0.13559322033898305,
+    "final_accuracy": 0.5833333333333334,
+    "final_accuracy_ci": {
+      "high": 0.6875000000000001,
+      "low": 0.4791666666666665
+    },
+    "net_accuracy_gain": -0.006944444444444568,
+    "preservation_rate": 0.8941176470588236,
+    "random_conditions": [
+      "random_seed_1",
+      "random_seed_2",
+      "random_seed_3"
+    ],
+    "solver_accuracy": 0.590277777777778,
+    "solver_accuracy_ci": {
+      "high": 0.6875,
+      "low": 0.4930555555555555
+    },
+    "task_count": 48
+  },
+  "seed": 42
+}

@@ -1,0 +1,67 @@
+{
+  "seed": 42,
+  "run_name": "hf_tiny_activation",
+  "model": {
+    "id": "Qwen/Qwen3-0.6B",
+    "revision": null,
+    "dtype": "auto",
+    "device": "auto",
+    "backend": "hf",
+    "max_new_tokens": 24
+  },
+  "benchmark": {
+    "name": "gsm8k_tiny",
+    "calibration_size": 1,
+    "dev_size": 1,
+    "test_size": 1
+  },
+  "roles": {
+    "names": ["planner", "solver", "critic", "verifier"],
+    "prompt_file": "configs/roles/default_roles.json"
+  },
+  "candidate_policy": {
+    "default_mode": "gold",
+    "wrong_offset": 1,
+    "mode_by_role": {
+      "planner": "unused",
+      "solver": "no_answer_plan",
+      "critic": "wrong_plus_one",
+      "verifier": "wrong_plus_one"
+    }
+  },
+  "activation_collection": {
+    "split": "calibration",
+    "max_pairs": 4,
+    "output_path": "artifacts/activation_stats/hf_tiny_stats.json",
+    "response_cache_path": "artifacts/cached_responses/hf_tiny.jsonl"
+  },
+  "importance": {
+    "method": "activation_weight",
+    "alpha": 1.0,
+    "beta": 0.5,
+    "epsilon": 1.0e-8
+  },
+  "pruning": {
+    "structural_unit": "mlp_intermediate",
+    "sparsities": [0.4],
+    "per_layer_ratio": true,
+    "random_seeds": [1, 2, 3]
+  },
+  "mask_building": {
+    "input_stats_path": "artifacts/activation_stats/hf_tiny_stats.json",
+    "output_template": "artifacts/masks/hf_tiny_sparsity_{sparsity}.json",
+    "source": "hf_tiny"
+  },
+  "functional_eval": {
+    "split": "test",
+    "max_items": 1,
+    "max_new_tokens": 16,
+    "masks_path": "artifacts/masks/hf_tiny_sparsity_0.4.json",
+    "mask_names": ["planner", "solver", "critic", "verifier", "generic", "random_seed_1"],
+    "output_path": "results/hf_tiny_masked_cross_role_metrics.json",
+    "predictions_path": "results/hf_tiny_masked_cross_role_predictions.jsonl"
+  },
+  "generation": {
+    "do_sample": false
+  }
+}
